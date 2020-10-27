@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import About from "./About";
 import Contact from "./Contact";
 import Details from "./Details";
-import GalleryNavbarGrid from "./GalleryNavbarGrid";
+// import GalleryNavbarGrid from "./GalleryNavbarGrid";
+import {Navbar} from "./Navbar";
 import ImageGallery from "./ImageGallery";
 import Shop from "./Shop";
 import {
@@ -41,10 +42,7 @@ export default function App(){
 
   return(
     <div id="gallery-div">
-      <GalleryNavbarGrid 
-        navHeight={this.state.navBarSize} 
-        currentPage={this.state.currentPage} 
-        handleSelection={this.handleSelection} />
+      <Navbar />
       {page}
     </div>
   );

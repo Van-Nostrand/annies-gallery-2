@@ -1,3 +1,4 @@
+const IMAGE_PREFIX = "./";
 export const ART_DATA = [
   {
     thumbUrl: `${IMAGE_PREFIX}photo1-thumb.jpg`, 
@@ -69,3 +70,16 @@ export const PAGE_DATA = {
     aboutPhoto: `${IMAGE_PREFIX}scoutberry.png`,
   }
 };
+
+export const RANDOM_COLORS = [
+  "rgba(228, 199, 79, 1)",
+  "rgba(82, 199, 71, 1)",
+  "rgba(226, 94, 19, 1)",
+  "rgba(181, 70, 212, 1)",
+  "rgba(64, 72, 233, 1)",
+  "rgba(146, 173, 106, 1)",
+  "rgba(254, 42, 42, 1)",
+  "rgba(8, 104, 119, 1)",
+  "rgba(66, 158, 0, 1)",
+  "rgba(76, 9, 193, 1)"
+];
