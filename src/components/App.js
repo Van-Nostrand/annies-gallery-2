@@ -15,7 +15,7 @@ import {
 export default function App(){
 
   const [ cart, setCart ] = useState([]);
-  const [ currentPage, setCurrentPage ] = useState("works");
+  const [ currentPage, setCurrentPage ] = useState("contact");
 
   let page;
   switch(currentPage){

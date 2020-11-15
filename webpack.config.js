@@ -9,6 +9,13 @@ module.exports = {
     filename: "bundle.js",
     publicPath: ""
   },
+  devServer: {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+      "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Authorization",
+    }
+  },
   module: {
     rules: [
       {
