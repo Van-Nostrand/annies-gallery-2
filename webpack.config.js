@@ -9,13 +9,7 @@ module.exports = {
     filename: "[name].bundle.js",
     publicPath: ""
   },
-  // devServer: {
-  //   headers: {
-  //     "Access-Control-Allow-Origin": "*",
-  //     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-  //     "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Authorization",
-  //   }
-  // },
+
   module: {
     rules: [
       {
@@ -33,11 +27,12 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              implementation: require('node-sass'),
-              sassOptions: {
-                file: "src/sass/main.scss",
-                outFile: "public/style.css"
-              }
+              // Prefer 'dart-sass'
+              implementation: require('sass'),
+              // sassOptions: {
+              //   file: "src/sass/main.scss",
+              //   outFile: "public/style.css"
+              // }
             }
           }
         ]

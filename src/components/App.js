@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import About from "./About";
-// import Contact from "./Contact";
 import Details from "./Details";
-// import GalleryNavbarGrid from "./GalleryNavbarGrid";
 import {Navbar} from "./Navbar";
 import ImageGallery from "./ImageGallery";
 import Shop from "./Shop";
@@ -30,9 +28,9 @@ export default function App(){
     case "shop":
       page = <Shop />;
       break;
-    // case "contact":
-    //   page = <Contact />;
-    //   break;
+    case "contact":
+      page = <Contact />;
+      break;
     case "details":
       let selected = ART_DATA.filter((art) => art.name === currentPage)[0];
       page = <Details subject={selected} addToCart={handleAddToCart} />

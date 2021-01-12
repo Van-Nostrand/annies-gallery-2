@@ -1,7 +1,5 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@use "base/base";
+@use "layout/grid";
 
-@import "base/base";
-@import "layout/grid";
+@use "components/navbar";
 
-@import "components/navbar";

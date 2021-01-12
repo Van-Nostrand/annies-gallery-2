@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/vars";
+
 *,
 *::before,
 *::after{
@@ -9,16 +12,16 @@
 html{
   font-size: 62.5%;
   //none of these numbers look right
-  @include respond(tab-land){  // width < 1200
+  @include mixins.respond(tab-land){  // width < 1200
     font-size: 56.25%;
   }
-  @include respond(tab-port){  // width < 900
+  @include mixins.respond(tab-port){  // width < 900
     font-size: 50%;
   }
-  @include respond(phone){
+  @include mixins.respond(phone){
     font-size: 40%;
   }
-  @include respond(big-desk){  // width > 1800
+  @include mixins.respond(big-desk){  // width > 1800
     font-size: 75%;
   }
 
