@@ -1,0 +1,16 @@
+@use "../abstracts/mixins";
+@use "../abstracts/vars";
+
+
+.img-gallery-container{
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+
+  img{
+    margin: 2rem 4rem;
+    max-height: 25rem;
+  }
+}

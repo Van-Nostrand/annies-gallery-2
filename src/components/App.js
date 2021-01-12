@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import About from "./About";
 import Details from "./Details";
-import {Navbar} from "./Navbar";
+import Navbar from "./Navbar";
+import Contact from "./Contact";
 import ImageGallery from "./ImageGallery";
 import Shop from "./Shop";
 import {
@@ -23,13 +24,13 @@ export default function App(){
               artData={ART_DATA} />;
       break;
     case "about":
-      page = <About data={PAGE_DATA["about"]}/>;
+      page = <About data={PAGE_DATA["about"]}  />;
       break;
     case "shop":
-      page = <Shop />;
+      page = <Shop  />;
       break;
     case "contact":
-      page = <Contact />;
+      page = <Contact  />;
       break;
     case "details":
       let selected = ART_DATA.filter((art) => art.name === currentPage)[0];
@@ -40,7 +41,7 @@ export default function App(){
 
   return(
     <div id="gallery-div">
-      <Navbar />
+      <Navbar setCurrentPage={setCurrentPage} />
       {page}
     </div>
   );

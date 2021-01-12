@@ -1,21 +1,11 @@
-import React, {Component} from "react";
+import React from "react";
 
-class Shop extends Component{
-  constructor(props){
-    super(props);
-  }
-
-  render(){
-    return(
-      <div>
-        <div>Coming soon!</div>
-        <div>
-        </div>
-        <div>
-        </div>
-      </div>
-    )
-  }
-}
+const Shop = () => {
+  return(
+    <div>
+      <div>Coming soon!</div>
+    </div>
+  );
+};
 
 export default Shop;
