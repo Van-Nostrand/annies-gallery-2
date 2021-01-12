@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import About from "./About";
-import Contact from "./Contact";
+// import Contact from "./Contact";
 import Details from "./Details";
 // import GalleryNavbarGrid from "./GalleryNavbarGrid";
 import {Navbar} from "./Navbar";
@@ -15,7 +15,7 @@ import {
 export default function App(){
 
   const [ cart, setCart ] = useState([]);
-  const [ currentPage, setCurrentPage ] = useState("contact");
+  const [ currentPage, setCurrentPage ] = useState("about");
 
   let page;
   switch(currentPage){
@@ -30,9 +30,9 @@ export default function App(){
     case "shop":
       page = <Shop />;
       break;
-    case "contact":
-      page = <Contact />;
-      break;
+    // case "contact":
+    //   page = <Contact />;
+    //   break;
     case "details":
       let selected = ART_DATA.filter((art) => art.name === currentPage)[0];
       page = <Details subject={selected} addToCart={handleAddToCart} />

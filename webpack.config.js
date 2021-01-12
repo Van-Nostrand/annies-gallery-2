@@ -6,16 +6,16 @@ module.exports = {
   entry: __dirname + "/src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     publicPath: ""
   },
-  devServer: {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-      "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Authorization",
-    }
-  },
+  // devServer: {
+  //   headers: {
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+  //     "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Authorization",
+  //   }
+  // },
   module: {
     rules: [
       {
@@ -43,6 +43,10 @@ module.exports = {
         ]
       },
       {
+        test: /\.(jpe?g|svg|png|gif)$/,
+        type: "asset/resource"
+      },
+      {
         test: /\.css$/,
         use: [
           {
@@ -58,12 +62,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + "/public/index.html",
+      template: path.resolve(__dirname, "public/index.html"),
       inject: "body"
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
     })
-  ]
+  ],
+  devtool: "source-map"
 }
