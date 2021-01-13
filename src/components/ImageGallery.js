@@ -8,6 +8,8 @@ import martinandi from "../../assets/martinandi.jpg";
 import uncovered from "../../assets/uncovered.jpg";
 import vortex from "../../assets/vortex.jpg";
 
+// super helpful!! vvv
+// https://stackoverflow.com/questions/53762640/how-to-import-all-images-from-a-folder-in-reactjs
 
 const imageNames = [
   "halo1", "halo2", "blindfolded", "jayden", "martinandi", "uncovered", "vortex"
@@ -16,6 +18,13 @@ const imageNames = [
 
 const ImageGallery = (props) => {
   let [ imageData, setImageData ] = useState([]);
+
+  const importAll = (r) => {
+    return r.keys().map(r);
+  }
+
+  const images = importAll(require.context('../../assets', false, /\.(png|jpe?g|svg)$/));
+  console.log(images);
 
   return(
     <div className="img-gallery-container">
