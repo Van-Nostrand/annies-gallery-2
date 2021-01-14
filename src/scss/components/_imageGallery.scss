@@ -9,8 +9,42 @@
   justify-content: center;
 
 
-  img{
+  .img-div{
+    position: relative;
     margin: 2rem 4rem;
     max-height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .img-hover-text{
+      position: absolute;
+      opacity: 0;
+      color: white;
+      font-size: 2.5em;
+      transition: opacity 100ms ease-in;
+    }
+
+    .img-hover-filter{
+      opacity: 0;
+      position: absolute;
+      background-color: grey;
+      width: 100%;
+      height: 100%;
+      transition: opacity 100ms ease-in;
+    }
+
+    img{
+    }
+  }
+
+  .img-div:hover{
+    .img-hover-text{
+      opacity: 1;
+    }
+    .img-hover-filter{
+      opacity: 0.4;
+    }
   }
 }

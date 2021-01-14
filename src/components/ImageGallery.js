@@ -1,50 +1,43 @@
 import React, {useState, useEffect, useRef} from "react";
-import {images} from "../functions/images";
-import halo1 from "../../assets/halo1.jpg";
-import halo2 from "../../assets/halo2.jpg";
-import blindfolded from "../../assets/blindfolded.jpg";
-import jayden from "../../assets/jayden.jpg";
-import martinandi from "../../assets/martinandi.jpg";
-import uncovered from "../../assets/uncovered.jpg";
-import vortex from "../../assets/vortex.jpg";
+// import {images} from "../functions/images";
 
 // super helpful!! vvv
 // https://stackoverflow.com/questions/53762640/how-to-import-all-images-from-a-folder-in-reactjs
 
-const imageNames = [
-  "halo1", "halo2", "blindfolded", "jayden", "martinandi", "uncovered", "vortex"
-];
-
-
 const ImageGallery = (props) => {
   let [ imageData, setImageData ] = useState([]);
+  let [ windowSize, setWindowSize ] = useState(window.innerWidth);
+
+  // useEffect(() => {
+  //   setWindowSize(window.innerWidth);
+  // },[])
+
+  console.log(windowSize);
 
   const importAll = (r) => {
     return r.keys().map(r);
   }
 
-  const images = importAll(require.context('../../assets', false, /\.(png|jpe?g|svg)$/));
-  console.log(images);
+  const images = importAll(require.context('../../assets', false, /thumbnail\.(png|jpe?g|svg)$/));
+
+  let imageElements = images.map((src,i) => {
+    return(
+      <ImageElement source={src} key={`imageelement${i}`} />
+    );
+  });
 
   return(
     <div className="img-gallery-container">
-      <img src={halo1} />
-      <img src={halo2} />
-      <img src={blindfolded} />
-      <img src={jayden} />
-      <img src={martinandi} />
-      <img src={uncovered} />
-      <img src={vortex} />
+      {imageElements}
     </div>
   );
 }
 
 const ImageElement = (props) => {
   return(
-    <div 
-      className="img-div" >
-
-      <span className="img-hover-text">select image</span>
+    <div className="img-div" onClick={() => console.log("clicked div")} >
+      <div className="img-hover-text">more info</div>
+      <div className="img-hover-filter"></div>
       <img src={props.source} className="img-thumb" />
     </div>
   )

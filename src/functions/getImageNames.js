@@ -1,13 +1,9 @@
 const getImageNames = () => {
-  const r = require.context('../assets/', false, /\.(jpg|png)$/);
+  const importAll = (r) => r.keys().map(r);
+  
+  const imageNames = importAll(require.context('../../assets/', false, /\.(jpe?g|png)$/));
 
-  console.log(r);
-
-  const importAll = (r) => r.keys().map(file => file.match(/[^\/]+$/)[0]);
-
-  console.log(importAll);
-
-  return importAll(r);
+  return imageNames;
 }
 
 export default getImageNames;
