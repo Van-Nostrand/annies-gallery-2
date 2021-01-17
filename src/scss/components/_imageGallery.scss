@@ -5,13 +5,13 @@
 .img-gallery-container{
 
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column;
+  justify-content: space-between;
 
 
   .img-div{
     position: relative;
-    margin: 2rem 4rem;
+    margin: 9rem 4rem;
     max-height: 25rem;
     display: flex;
     align-items: center;
