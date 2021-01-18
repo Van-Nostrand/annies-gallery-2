@@ -8,6 +8,7 @@ const About = (props) => {
       <div>
         {paragraphs}
       </div>
+      <div>THIS IS THE DANG ABOUT PAGE</div>
       <div>
         <img src={props.data.aboutPhoto}></img>
       </div>

@@ -1,14 +1,17 @@
 import React, {useState, useEffect, useRef} from "react";
+import { Link, useRouteMatch } from "react-router-dom";
 import {useIntersectionObserver} from "../functions/useIntersectionObserver";
 
 /**
  * loads a placeholder until the image is ready to load
  * @param {source} props path/name of image file
  */
-const ImageWithObserver = ({source, selectWork, name}) => {
+const ImageWithObserver = ({source, name}) => {
 
   const [ showImage, setShowImage ] = useState(false);
   const placeholderRef = useRef(null);
+
+  let {path, url} = useRouteMatch();
 
   useEffect(() => {
     useIntersectionObserver(placeholderRef.current, setShowImage);
@@ -16,10 +19,14 @@ const ImageWithObserver = ({source, selectWork, name}) => {
 
   // console.log("imagewithobserver!!");
 
+  /*
+  I'll have to address this eventually. I made the Link element the clickable thing but it used to be the parent div. Now ONLY the text is clickable, but I want the whole image to be clickable. 
+  */
   if(showImage){
     return(
-      <div className="img-div" onClick={() => selectWork(`details-${name}`)} >
-        <div className="img-hover-text">more info</div>
+      <div className="img-div"  >
+        
+        <Link className="img-hover-text" to={`/details/${name}`}>more info</Link>
         <div className="img-hover-filter"></div>
         <img className="img-thumb" src={source} alt="artwork" />
       </div>
@@ -27,7 +34,7 @@ const ImageWithObserver = ({source, selectWork, name}) => {
   }
 
   return(
-    <div ref={placeholderRef} className="img-div" onClick={() => selectWork(`details-${name}`)} >
+    <div ref={placeholderRef} className="img-div"  >
       <div className="img-hover-text">more info</div>
       <div className="img-hover-filter"></div>
       <span className="img-thumb" ></span>

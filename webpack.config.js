@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
-    publicPath: "",
+    publicPath: "/",
     assetModuleFilename: "images/[hash]-[name][ext]"
   },
   module: {
@@ -58,12 +58,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public/index.html"),
-      inject: "body"
+  
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
     })
   ],
-  devtool: "source-map"
+  devtool: "source-map",
+  devServer: {
+    historyApiFallback: true
+  }
 }

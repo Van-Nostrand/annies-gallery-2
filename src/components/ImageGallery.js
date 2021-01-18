@@ -31,7 +31,7 @@ const ImageGallery = ({artData, selectWork}) => {
     // console.log("IMAGEDATA!!");
     // console.log(imageData);
     
-    return(<ImageWithObserver selectWork={selectWork} name={imageData[0].name} source={src} key={`imageelement${i}`} />);
+    return(<ImageWithObserver name={imageData[0].name.split(" ").join("").toLowerCase()} source={src} key={`imageelement${i}`} />);
   });
 
   return(
