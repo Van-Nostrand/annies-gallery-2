@@ -10,12 +10,10 @@ const Contact = (props) => {
   return(
     <div>
       <p>Contact Page</p>
-      <input 
-        type="text" 
-        value={inputText} 
-        onChange={setInputText} />
-
-      <button onClick={handleClick} >CLICK</button>
+      <div>facbook</div>
+      <div>insta</div>
+      <div>email</div>
+      
     </div>
   )
 }

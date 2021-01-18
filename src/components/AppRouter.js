@@ -20,19 +20,20 @@ export default function AppRouter(){
     <Router>
       <Navbar  />
 
-
-      <Switch>
-        <Route exact path="/">
-          <About data={PAGE_DATA["about"]} />
-        </Route>
-        <Route path="/works">
-          <ImageGallery  artData={ART_DATA} />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/details/:name" children={<Details artData={ART_DATA} />} />
-      </Switch>
+      <div className="pagewrapper">
+        <Switch>
+          <Route exact path="/">
+            <About data={PAGE_DATA["about"]} />
+          </Route>
+          <Route path="/works">
+            <ImageGallery  artData={ART_DATA} />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/details/:name" children={<Details artData={ART_DATA} />} />
+        </Switch>
+      </div>
     </Router>
     
   );

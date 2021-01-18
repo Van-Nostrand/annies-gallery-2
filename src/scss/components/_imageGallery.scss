@@ -7,7 +7,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-
+  
   .img-div{
     position: relative;
     margin: 2rem 4rem;
@@ -35,7 +35,7 @@
     }
 
     a{
-      z-index: 4;
+      // z-index: 4;
     }
   }
 
