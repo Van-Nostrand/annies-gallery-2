@@ -1,32 +1,37 @@
 import React, {useState, useEffect, useRef} from "react";
-// import {images} from "../functions/images";
 import ImageElement from "./ImageElement";
 import ImageWithObserver from "./ImageWithObserver";
 
-// super helpful!! vvv
-// https://stackoverflow.com/questions/53762640/how-to-import-all-images-from-a-folder-in-reactjs
+const ImageGallery = ({artData, selectWork}) => {
 
-const ImageGallery = (props) => {
-  let [ imageData, setImageData ] = useState([]);
-  let [ windowSize, setWindowSize ] = useState(window.innerWidth);
-
-  // useEffect(() => {
-  //   setWindowSize(window.innerWidth);
-  // },[])
-
-  console.log(windowSize);
+  let [ imagePaths, setImagePaths ] = useState([]);
 
   const importAll = (r) => {
     return r.keys().map(r);
   }
 
-  const images = importAll(require.context('../../assets', false, /thumbnail\.(png|jpe?g|svg)$/));
+  // {
+  //   thumbUrl: `halo1-thumbnail.jpg`, 
+  //   imgUrl: `halo1.jpg`, 
+  //   date: "DATE HERE", 
+  //   medium: "MEDIUM HERE", 
+  //   description: "Food truck photo booth synth small batch shoreditch", 
+  //   name: "halo 1"
+  // },
 
-  
-  let imageElements = images.map((src,i) => {
-    return(
-      <ImageWithObserver source={src} key={`imageelement${i}`} />
-    );
+  useEffect(() => {
+    const images = importAll(require.context('../../assets', false, /thumbnail\.(png|jpe?g|svg)$/));
+    setImagePaths(images);
+  },[]);
+ 
+  let imageElements = imagePaths.map((src,i) => {
+    
+    //as usual, in an effort to keep things flexible I've made it too complicated
+    let imageData = artData.filter(art => RegExp(`${ art.name.split(" ").join("")}`.toLowerCase()).test(src) );
+    // console.log("IMAGEDATA!!");
+    // console.log(imageData);
+    
+    return(<ImageWithObserver selectWork={selectWork} name={imageData[0].name} source={src} key={`imageelement${i}`} />);
   });
 
   return(
@@ -35,15 +40,5 @@ const ImageGallery = (props) => {
     </div>
   );
 }
-
-// const ImageElement = (props) => {
-//   return(
-//     <div className="img-div" onClick={() => console.log("clicked div")} >
-//       <div className="img-hover-text">more info</div>
-//       <div className="img-hover-filter"></div>
-//       <img src={props.source} className="img-thumb" />
-//     </div>
-//   )
-// }
 
 export default ImageGallery;

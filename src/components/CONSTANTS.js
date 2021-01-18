@@ -1,62 +1,120 @@
 const IMAGE_PREFIX = "./";
 export const ART_DATA = [
   {
-    thumbUrl: `photo1-thumb.jpg`, 
-    imgUrl: `photo1.jpg`, 
+    thumbUrl: `halo1-thumbnail.jpg`, 
+    imgUrl: `halo1.jpg`, 
     date: "DATE HERE", 
     medium: "MEDIUM HERE", 
     description: "Food truck photo booth synth small batch shoreditch", 
     name: "halo 1"
   },
   {
-    thumbUrl: `photo2-thumb.jpg`, 
-    imgUrl: `photo2.jpg`, 
+    thumbUrl: `uncovered-thumbnail.jpg`, 
+    imgUrl: `uncovered.jpg`, 
     date: "DATE HERE", 
     medium: "MEDIUM HERE", 
     description: "Food truck photo booth synth small batch shoreditch", 
     name: "uncovered"
   },
   {
-    thumbUrl: `photo3-thumb.jpg`, 
-    imgUrl: `photo3.jpg`, 
+    thumbUrl: `halo2-thumbnail.jpg`, 
+    imgUrl: `halo2.jpg`, 
     date: "DATE HERE", 
     medium: "MEDIUM HERE", 
     description: "Food truck photo booth synth small batch shoreditch", 
     name: "halo 2"
   },
   {
-    thumbUrl: `photo4-thumb.jpg`, 
-    imgUrl: `photo4.jpg`, 
+    thumbUrl: `martinandi-thumbnail.jpg`, 
+    imgUrl: `martinandi.jpg`, 
     date: "DATE HERE", 
     medium: "MEDIUM HERE", 
     description: "Food truck photo booth synth small batch shoreditch", 
     name: "martin and I"
   },
   {
-    thumbUrl: `photo5-thumb.jpg`, 
-    imgUrl: `photo5.jpg`, 
+    thumbUrl: `blindfolded-thumbnail.jpg`, 
+    imgUrl: `blindfolded.jpg`, 
     date: "DATE HERE", 
     medium: "MEDIUM HERE", 
     description: "Food truck photo booth synth small batch shoreditch", 
     name: "blindfolded"
   },
   {
-    thumbUrl: `photo6-thumb.jpg`, 
-    imgUrl: `photo6.jpg`, 
+    thumbUrl: `vortex-thumbnail.jpg`, 
+    imgUrl: `vortex.jpg`, 
     date: "DATE HERE", 
     medium: "MEDIUM HERE", 
     description: "Food truck photo booth synth small batch shoreditch", 
     name: "vortex"
   },
   {
-    thumbUrl: `photo7-thumb.jpg`, 
-    imgUrl: `photo7.jpg`, 
+    thumbUrl: `jayden-thumbnail.jpg`, 
+    imgUrl: `jayden.jpg`, 
     date: "DATE HERE", 
     medium: "MEDIUM HERE", 
     description: "Food truck photo booth synth small batch shoreditch", 
     name: "jayden"
   },
 ];
+// export const ART_DATA = [
+//   {
+//     thumbUrl: `photo1-thumb.jpg`, 
+//     imgUrl: `photo1.jpg`, 
+//     date: "DATE HERE", 
+//     medium: "MEDIUM HERE", 
+//     description: "Food truck photo booth synth small batch shoreditch", 
+//     name: "halo 1"
+//   },
+//   {
+//     thumbUrl: `photo2-thumb.jpg`, 
+//     imgUrl: `photo2.jpg`, 
+//     date: "DATE HERE", 
+//     medium: "MEDIUM HERE", 
+//     description: "Food truck photo booth synth small batch shoreditch", 
+//     name: "uncovered"
+//   },
+//   {
+//     thumbUrl: `photo3-thumb.jpg`, 
+//     imgUrl: `photo3.jpg`, 
+//     date: "DATE HERE", 
+//     medium: "MEDIUM HERE", 
+//     description: "Food truck photo booth synth small batch shoreditch", 
+//     name: "halo 2"
+//   },
+//   {
+//     thumbUrl: `photo4-thumb.jpg`, 
+//     imgUrl: `photo4.jpg`, 
+//     date: "DATE HERE", 
+//     medium: "MEDIUM HERE", 
+//     description: "Food truck photo booth synth small batch shoreditch", 
+//     name: "martin and I"
+//   },
+//   {
+//     thumbUrl: `photo5-thumb.jpg`, 
+//     imgUrl: `photo5.jpg`, 
+//     date: "DATE HERE", 
+//     medium: "MEDIUM HERE", 
+//     description: "Food truck photo booth synth small batch shoreditch", 
+//     name: "blindfolded"
+//   },
+//   {
+//     thumbUrl: `photo6-thumb.jpg`, 
+//     imgUrl: `photo6.jpg`, 
+//     date: "DATE HERE", 
+//     medium: "MEDIUM HERE", 
+//     description: "Food truck photo booth synth small batch shoreditch", 
+//     name: "vortex"
+//   },
+//   {
+//     thumbUrl: `photo7-thumb.jpg`, 
+//     imgUrl: `photo7.jpg`, 
+//     date: "DATE HERE", 
+//     medium: "MEDIUM HERE", 
+//     description: "Food truck photo booth synth small batch shoreditch", 
+//     name: "jayden"
+//   },
+// ];
 
 export const PAGE_DATA = {
   "works": "",

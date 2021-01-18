@@ -17,24 +17,26 @@ export default function App(){
   const [ currentPage, setCurrentPage ] = useState("about");
 
   let page;
-  switch(currentPage){
-    case "works":
+  switch(true){
+    case /works/.test(currentPage):
       page = <ImageGallery 
               selectWork={setCurrentPage} 
               artData={ART_DATA} />;
       break;
-    case "about":
+    case /about/.test(currentPage):
       page = <About data={PAGE_DATA["about"]}  />;
       break;
-    case "shop":
+    case /shop/.test(currentPage):
       page = <Shop  />;
       break;
-    case "contact":
+    case /contact/.test(currentPage):
       page = <Contact  />;
       break;
-    case "details":
-      let selected = ART_DATA.filter((art) => art.name === currentPage)[0];
-      page = <Details subject={selected} addToCart={handleAddToCart} />
+    case /^details/.test(currentPage):
+      // say it gets "details-halo 1"
+      let selected = ART_DATA.filter((art) => art.name === currentPage.split("-")[1]);
+      
+      page = <Details subject={selected[0]}  />
       break;
     default: page = <div>PLACEHOLDER</div>;
   }

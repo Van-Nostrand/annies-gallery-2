@@ -1,7 +1,4 @@
-import React, {useState, useEffect} from "react";
-
-const XICONOFFSET = 120;
-const YICONOFFSET = 20;
+import React from "react";
 
 const Navbar = (props) => {
 
@@ -34,10 +31,3 @@ const Navbar = (props) => {
 }
 
 export default Navbar;
-/*
-MOUSEENTER - only the bound element
-MOUSEOVER - bound or child element
-MOUSELEAVE - leave all descendents - does not bubble
-  -link container
-MOUSEOUT - leave individual descendents - bubbles
-*/
