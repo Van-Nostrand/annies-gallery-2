@@ -6,10 +6,13 @@
   display: flex;
   flex-flow: column;
   font-size: 4rem;
+  align-items: center;
 
   .title-container{
+    padding: 4rem 0;
     align-self: "flex-start";
     font-size: 2em;
+    text-align: center;
   }
 
   .link-container{
@@ -17,17 +20,46 @@
     flex-flow: row;
 
     margin: 1rem 0;
+    position: relative;
 
     a{
       margin: 0 3rem;
       padding: 0.5rem;
       border: none;
       font-size: 0.7em;
+      font-family: "Helvetica", sans-serif;
 
     }
   }
 
   .icon-container{
 
+  }
+}
+
+.landing-nav {
+
+  .title-container{
+    // padding: 6rem 0 0 0;
+    margin: 4rem 0 3rem;
+    color: white;
+  }
+
+  .fake-line{
+    width: 50rem;
+    height: 1rem;
+    background-color: white;
+  }
+
+  .link-container{
+    position: relative;
+    top: 50%;
+  
+    margin: 4rem auto;
+
+    a{
+      font-size: 1.2em;
+      color: white;
+    }
   }
 }

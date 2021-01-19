@@ -6,6 +6,7 @@ import Details from "./Details";
 import Navbar from "./Navbar";
 import Contact from "./Contact";
 import ImageGallery from "./ImageGallery";
+import LandingPage from "./LandingPage";
 import Shop from "./Shop";
 import {
   ART_DATA,
@@ -14,12 +15,19 @@ import {
 
 export default function App(){
 
+  // let { path, url } = useRouteMatch();
+
+  // console.log(path);
+  // console.log(url);
  
   return(
     <Router>
       <Navbar  />
         <Switch>
           <Route exact path="/">
+            <LandingPage />
+          </Route>
+          <Route path="/about">
             <About data={PAGE_DATA["about"]} />
           </Route>
           <Route path="/works">
