@@ -23,7 +23,7 @@ const ImageGallery = ({artData, selectWork}) => {
   });
 
   return(
-    <div className="img-gallery-container">
+    <div className="gallery-page-container">
       {imageElements}
     </div>
   );

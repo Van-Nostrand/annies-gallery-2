@@ -30,8 +30,14 @@ html{
 
 a{
   text-decoration: none;
+  font-weight: bold;
 }
+a:link{     color: #1c1c1c; }
+a:visited{  color: #202f46; }
+a:hover{    color: #242424; }
+a:active{   color: #333333; }
+a:focus{    color: #242424; }
 
-.pagewrapper *{
-  font-size: 3rem;
+#root [class$="-page-container"]{
+  // background-color: purple;
 }

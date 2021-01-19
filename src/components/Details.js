@@ -25,7 +25,7 @@ const Details = ({artData}) => {
   }
 
   return(
-    <div className="detail-container">
+    <div className="detail-page-container">
       <div className="image-div">
         <img className="fullsize-img" src={theImage} />
       </div>

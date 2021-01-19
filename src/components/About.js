@@ -15,7 +15,7 @@ const About = (props) => {
 
   if(imagePath){
     return (
-      <div className="about-page-div">
+      <div className="about-page-container">
         <div>
           {paragraphs}
         </div>
@@ -29,7 +29,7 @@ const About = (props) => {
 
   //import image here
   return(
-    <div className="about-page-div">
+    <div className="about-page-container">
       <div>
         {paragraphs}
       </div>

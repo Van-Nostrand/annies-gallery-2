@@ -1,12 +1,13 @@
-.detail-container{
+.detail-page-container{
   
   .image-div{
-    // position: relative;
-    object-fit: contain;
+
     max-height: 20rem;  
-    max-width: 20rem;
+    height: 20rem;
 
     img{
+      width: auto;
+      object-fit: contain;
       max-height: 100%;
       max-width: 100%;
     }
