@@ -1,3 +1,14 @@
 .about-page-container{
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(1,.01,1,.65);
+}
 
+@keyframes fade-in{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }

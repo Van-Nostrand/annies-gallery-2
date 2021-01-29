@@ -15,7 +15,7 @@ const Navbar = (props) => {
     checkNav();
   })
 
-  let navclass = `navbar ${landingNav ? 'landing-nav' : ""}`;
+  let navclass = `navbar${landingNav ? ' landing-nav' : ""}`;
 
   // console.log(match);
 

@@ -7,11 +7,12 @@ import Navbar from "./Navbar";
 import Contact from "./Contact";
 import ImageGallery from "./ImageGallery";
 import LandingPage from "./LandingPage";
+import BackgroundImageContainer from "./BackgroundImageContainer";
 import Shop from "./Shop";
 import {
   ART_DATA,
   PAGE_DATA
-} from "./CONSTANTS";
+} from "../constants/CONSTANTS";
 
 export default function App(){
 
@@ -22,6 +23,7 @@ export default function App(){
  
   return(
     <Router>
+      <BackgroundImageContainer />
       <Navbar  />
         <Switch>
           <Route exact path="/">
@@ -38,6 +40,7 @@ export default function App(){
           </Route>
           <Route path="/details/:name" children={<Details artData={ART_DATA} />} />
         </Switch>
+      
     </Router>
     
   );

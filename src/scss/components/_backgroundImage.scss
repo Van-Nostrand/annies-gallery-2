@@ -1,0 +1,19 @@
+.background-image-container{
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+
+  img{
+    object-fit: cover;
+    position: fixed;
+    width: 60vw;
+    transform: scale(1.2) translate(15rem, -15rem);
+    transition: transform 2s ease-in;
+  }
+}
+
+.landing-page-background{
+  img{
+    transform: scale(2) translate(15rem, -5rem);
+  }
+}
