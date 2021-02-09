@@ -15,7 +15,11 @@ const BackgroundImageContainer = (props) => {
     checkCurrent();
   });
 
-  let containerclass = `background-image-container ${landingPage ? 'landing-page-background' : ""}`;
+  // let containerclass = `background-image-container ${landingPage ? 'landing-page-background' : ""}`;
+  let containerclass = `background-image-container landing-page-background`;
+  if(!landingPage){
+    containerclass = containerclass.split(' ')[0];
+  }
 
   useEffect(() => {
     const context = require.context('../../assets', false, /.*(threehands).*(png|jpe?g)$/);
@@ -25,8 +29,8 @@ const BackgroundImageContainer = (props) => {
 
   if(imagePath){
     return (
-      <div className={containerclass}>
-        <img src={imagePath} alt="berrypicture" />
+      <div className={containerclass} style={{backgroundImage: `url(${imagePath})`}}>
+        {/* <img src={imagePath} alt="berrypicture" /> */}
       </div>
     )
   }
@@ -34,7 +38,7 @@ const BackgroundImageContainer = (props) => {
   //import image here
   return(
     <div className={containerclass}>
-      <span></span>
+      <span className='background-image-placeholder'></span>
     </div>
   )
 }

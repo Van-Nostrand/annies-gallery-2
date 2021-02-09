@@ -25,3 +25,5 @@ AND, for some reason, the root level route needs to have path specified as exact
 <Route exact path="/">
 
 now the router works.
+
+Feb 8 - reopened this and don't remember what I was working on... 

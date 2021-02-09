@@ -8,8 +8,6 @@
   flex-flow: column;
   font-size: 4rem;
   align-items: center;
-  transform: scaleY(1);
-  transition: transform 2s ease-in;
 
 
   .title-container{
@@ -22,8 +20,15 @@
     font-size: 2em;
     text-align: center;
 
-    transform: scaleY(1);
     transition: transform 2s ease-in;
+  }
+
+  .fake-line{
+    width: 50rem;
+    height: 1rem;
+    background-color: white;
+    opacity: 0;
+    transition: transform 2s ease-in, opacity 2s ease-in;
   }
 
   .link-container{
@@ -34,7 +39,6 @@
     bottom: 0;
     margin: 4rem auto;
 
-    transform: scaleY(1);
     transition: transform 2s ease-in;
 
     a{
@@ -45,35 +49,28 @@
       font-family: "Helvetica", sans-serif;
       color: black;
 
-      transform: scale(1);
       transition: transform 2s ease-in, color 2s ease-in;
 
     }
   }
-
-  .icon-container{
-
-  }
 }
 
 .landing-nav {
-  transform: scaleY(1.7);
   
   .title-container{
-    transform: scaleY(0.65);
+    transform: translateY(20vh);
   }
 
   .fake-line{
-    width: 50rem;
-    height: 1rem;
-    background-color: white;
+    opacity: 1;
+    transform: translateY(20vh);
   }
 
   .link-container{
-    transform: scaleY(0.65);
+    transform: translateY(25vh);
+
     a{
       color: white;
-      transform: scale(1.3);
     }
   }
 }

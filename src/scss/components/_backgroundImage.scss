@@ -1,19 +1,18 @@
 .background-image-container{
   position: absolute;
   overflow: hidden;
+  object-fit: contain;
+  background-position: 50% 50%;
+  background-size: 70%;
+  background-repeat: no-repeat;
   z-index: -1;
+  height: 100vh;
+  width: 100vw;
 
-  img{
-    object-fit: cover;
-    position: fixed;
-    width: 60vw;
-    transform: scale(1.2) translate(15rem, -15rem);
-    transition: transform 2s ease-in;
-  }
+  transition: transform 2s ease-in;
+
 }
 
 .landing-page-background{
-  img{
-    transform: scale(2) translate(15rem, -5rem);
-  }
+  transform: scale(2);
 }
