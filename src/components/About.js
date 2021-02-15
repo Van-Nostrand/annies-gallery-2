@@ -11,6 +11,10 @@ const About = (props) => {
     setImagePath(images[0]);
   },[]);
 
+  useEffect(() => {
+    props.setCurrentPage(window.location);
+  })
+
   let paragraphs = props.data.paragraphs.map((para, i) => <p className="about-paragraph fade-in" key={`about-p-${i}`}>{para}</p>);
 
   if(imagePath){

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const BackgroundImageContainer = (props) => {
+const BackgroundImageDiv = (props) => {
 
   let [ imagePath, setImagePath ] = useState();
   let [ landingPage, setLandingPage ] = useState();
@@ -16,9 +16,9 @@ const BackgroundImageContainer = (props) => {
   });
 
   // let containerclass = `background-image-container ${landingPage ? 'landing-page-background' : ""}`;
-  let containerclass = `background-image-container landing-page-background`;
+  let containerclass = 'background-image-container';
   if(!landingPage){
-    containerclass = containerclass.split(' ')[0];
+    containerclass = containerclass + ' background-image-container-small';
   }
 
   useEffect(() => {
@@ -43,4 +43,4 @@ const BackgroundImageContainer = (props) => {
   )
 }
 
-export default BackgroundImageContainer;
+export default BackgroundImageDiv;

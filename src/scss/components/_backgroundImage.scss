@@ -1,18 +1,23 @@
-.background-image-container{
-  position: absolute;
-  overflow: hidden;
-  object-fit: contain;
-  background-position: 50% 50%;
-  background-size: 70%;
-  background-repeat: no-repeat;
-  z-index: -1;
-  height: 100vh;
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+
+.background-image{
+  color: vars.$color-primary;
+  object-fit: cover;
+  transform:  scale(1.5) translate(0, 0%);
   width: 100vw;
-
-  transition: transform 2s ease-in;
-
+  height: 100vh;
 }
 
-.landing-page-background{
-  transform: scale(2);
+.background-image-container{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image-container-small{
+  height: vars.$landed-image-height;
+  transform: translate(0, -20%);
+  transition: all 2s ease-in;
 }

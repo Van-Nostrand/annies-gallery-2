@@ -1,0 +1,7 @@
+@use "../abstracts/vars";
+@use "../abstracts/mixins";
+
+.content-container{
+  position: relative;
+  top: vars.$landed-image-height;
+}
