@@ -14,7 +14,7 @@ const Navbar = (props) => {
     checkNav();
   })
 
-  let navclass = `navbar${landingNav ? ' landing-nav' : ""}`;
+  let navclass = `navbar${!landingNav ? ' nav-small' : ""}`;
 
   return(
     <nav className={navclass} >
@@ -32,6 +32,7 @@ const Navbar = (props) => {
         <Link to="/about">About</Link>
         <Link to="/works">Works</Link>
         <Link to="/contact">Contact</Link>
+        <Link to="/">LANDING</Link>
     
       </div>
     </nav>

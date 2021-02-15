@@ -6,6 +6,11 @@ import EmailLogo from "../../assets/emailLogo.svg";
 const Contact = (props) => {
   let [ inputText, setInputText ] = useState("");
 
+  useEffect(() => {
+    props.setCurrentPage(window.location);
+    console.log(window.location);
+  })
+
   return(
     <div className="contact-page-container">
       <p>Contact Page</p>

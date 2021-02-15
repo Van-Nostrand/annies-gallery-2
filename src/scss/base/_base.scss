@@ -1,5 +1,5 @@
-@use "../abstracts/mixins";
 @use "../abstracts/vars";
+@use "../abstracts/mixins";
 
 /* lobster-regular - latin */
 @font-face {
@@ -75,4 +75,5 @@ a:focus{    color: #242424; }
 
 #root [class$="-page-container"]{
   // background-color: purple;
+  // overflow: hidden;
 }

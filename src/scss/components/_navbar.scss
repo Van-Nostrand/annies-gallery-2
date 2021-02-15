@@ -1,5 +1,5 @@
-@use "../abstracts/mixins";
 @use "../abstracts/vars";
+@use "../abstracts/mixins";
 
 .navbar{
   position: relative;
@@ -9,26 +9,30 @@
   font-size: 4rem;
   align-items: center;
 
-
   .title-container{
     position: relative;
     top: 0;
     color: white;
 
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     align-self: "flex-start";
     font-size: 2em;
     text-align: center;
+    transform-origin: top center;
 
-    transition: transform 2s ease-in;
+    transform: translateY(20vh);
+
+    h1{
+      // height: 6rem;
+    }
   }
 
   .fake-line{
     width: 50rem;
     height: 1rem;
     background-color: white;
-    opacity: 0;
-    transition: transform 2s ease-in, opacity 2s ease-in;
+    opacity: 1;
+    transform: translateY(18.5vh);
   }
 
   .link-container{
@@ -37,40 +41,38 @@
 
     position: relative;
     bottom: 0;
-    margin: 4rem auto;
+    margin: 0 auto;
 
-    transition: transform 2s ease-in;
-
+    transform: translateY(22vh);
+    
     a{
       margin: 0 3rem;
       padding: 0.5rem;
       border: none;
       font-size: 0.7em;
       font-family: "Helvetica", sans-serif;
-      color: black;
-
-      transition: transform 2s ease-in, color 2s ease-in;
-
+      color: white;
     }
   }
 }
 
-.landing-nav {
-  
-  .title-container{
-    transform: translateY(20vh);
-  }
+.navbar.nav-small .title-container{
+  transition: all 2s ease-in;
+  transform: translateY(0vh) scale(0.8);
+}
 
-  .fake-line{
-    opacity: 1;
-    transform: translateY(20vh);
-  }
+.navbar.nav-small .fake-line{
+  transition: all 2s ease-in;
+  opacity: 0;
+  transform: translateY(0vh);
+}
 
-  .link-container{
-    transform: translateY(25vh);
+.navbar.nav-small .link-container{
+  transition: all 2s ease-in;
+  transform: translateY(0vh);
 
-    a{
-      color: white;
-    }
+  a{
+    transition: color 2s ease-in;
+
   }
 }
