@@ -10,6 +10,7 @@ import LandingPage from "./LandingPage";
 import BackgroundImageDiv from "./BackgroundImageDiv";
 // import BackgroundImageElement from "./BackgroundImageElement";
 import BackgroundImage from "./BackgroundImage";
+import ImgElement from "./ImgElement";
 import Shop from "./Shop";
 import {
   ART_DATA,
@@ -27,7 +28,7 @@ export default function App(){
 
   return(
     <Router>
-      <BackgroundImage />
+      <ImgElement />
       <Navbar landing={landingPage}  />
       <div className={landingPage ? 'content-container landing-content-container' : 'content-container'}>
         <Switch>

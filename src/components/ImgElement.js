@@ -15,8 +15,6 @@ const ImgElement = (props) => {
     checkCurrent();
   });
 
-
-
   useEffect(() => {
     const context = require.context('../../assets', false, /.*(threehands).*(png|jpe?g)$/);
     const images = context.keys().map(context);
@@ -25,13 +23,16 @@ const ImgElement = (props) => {
 
   if(imagePath){
     return (
-      <img className='background-img-element' src={imagePath} alt="berrypicture" />
+      <img 
+        className={landingPage ? 'b-img-element' : 'b-img-element small-bg' }
+        src={imagePath} 
+        alt="berrypicture" />
     )
   }
 
   //import image here
   return(
-    <span className='background-img-ph'></span>
+    <span className='b-img-ph'></span>
   )
 }
 
