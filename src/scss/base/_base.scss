@@ -29,8 +29,6 @@
        url('../../fonts/fredoka-one-v8-latin-regular.svg#FredokaOne') format('svg'); /* Legacy iOS */
 }
 
-
-
 *,
 *::before,
 *::after{
@@ -55,12 +53,13 @@ html{
     font-size: 75%;
   }
 
-  // font-family: Helvetica, sans-serif;
+  min-height: 100vh;
+  font-family: Helvetica, sans-serif;
   // font-family: "Lobster";
   // font-family: "Lobster", cursive;
   // font-family: "Fredoka One", cursive;
   // font-family: "Fredoka One";
-  font-family: cursive;
+  // font-family: cursive;
 }
 
 a{
@@ -73,11 +72,17 @@ a:hover{    color: #242424; }
 a:active{   color: #333333; }
 a:focus{    color: #242424; }
 
-#root [class$="-page-container"]{
-  // background-color: purple;
-  // overflow: hidden;
+body, html, #root{
+  height: 100%;
 }
 
-// .landing-background{
-//   background-color: 
-// }
+#root [class$="-page-container"]{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.app-wrapper{
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}

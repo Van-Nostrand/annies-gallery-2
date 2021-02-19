@@ -2,9 +2,12 @@
 @use "../abstracts/mixins";
 
 .content-container{
-  position: relative;
+  position: relative;  
   padding-top: 2rem;
-  display: flex;
-  flex-flow: column;
+  display: inline-block;
   background-color: vars.$color-lighter-grey;
+  // height: 100%;
+  flex-grow: 5;
+
+  
 }

@@ -7,10 +7,7 @@ import Navbar from "./Navbar";
 import Contact from "./Contact";
 import ImageGallery from "./ImageGallery";
 import LandingPage from "./LandingPage";
-import BackgroundImageDiv from "./BackgroundImageDiv";
-// import BackgroundImageElement from "./BackgroundImageElement";
-import BackgroundImage from "./BackgroundImage";
-import ImgElement from "./ImgElement";
+
 import Shop from "./Shop";
 import {
   ART_DATA,
@@ -27,41 +24,44 @@ export default function App(){
   },[currentPage])
 
   return(
-    <Router>
+    <div className='app-wrapper'>
+      <Router>
      
-      <Navbar landing={landingPage}  />
-      <div className={landingPage ? 'content-container landing-content-container' : 'content-container'}>
-        <Switch>
-          <Route exact path="/">
-            <LandingPage 
-              // checkLocation={checkLocation} 
-              setCurrentPage={setCurrentPage} 
+        <Navbar landing={landingPage}  />
+        <div className={landingPage ? 'content-container landing-content-container' : 'content-container'}>
+          <Switch>
+            <Route exact path="/">
+              <LandingPage 
+              
+                setCurrentPage={setCurrentPage} 
+                />
+            </Route>
+            <Route path="/about">
+              <About 
+              
+                setCurrentPage={setCurrentPage} 
+                data={PAGE_DATA["about"]} 
               />
-          </Route>
-          <Route path="/about">
-            <About 
-              // checkLocation={checkLocation} 
-              setCurrentPage={setCurrentPage} 
-              data={PAGE_DATA["about"]} 
-            />
-          </Route>
-          <Route path="/works">
-            <ImageGallery 
-              // checkLocation={checkLocation} 
-              setCurrentPage={setCurrentPage}  
-              artData={ART_DATA} 
-            />
-          </Route>
-          <Route path="/contact">
-            <Contact 
-              // checkLocation={checkLocation} 
-              setCurrentPage={setCurrentPage} 
-            />
-          </Route>
-          <Route path="/details/:name" children={<Details artData={ART_DATA} />} /> 
-        </Switch>
-      </div>
-    </Router>
+            </Route>
+            <Route path="/works">
+              <ImageGallery 
+              
+                setCurrentPage={setCurrentPage}  
+                artData={ART_DATA} 
+              />
+            </Route>
+            <Route path="/contact">
+              <Contact 
+              
+                setCurrentPage={setCurrentPage} 
+              />
+            </Route>
+            <Route path="/details/:name" children={<Details artData={ART_DATA} />} /> 
+          </Switch>
+        </div>
+      </Router>
+    </div>
+    
     
   );
 }

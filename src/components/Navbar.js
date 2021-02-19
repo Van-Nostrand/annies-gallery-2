@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Link, useLocation } from "react-router-dom";
-import NavbarBackgroundImage from "../../assets/martinandI-draft1.svg";
+import NavbarBackgroundImage from "../../assets/martinandI-draft2.svg";
 
 const Navbar = (props) => {
   let [ landingNav, setLandingNav ] = useState();
@@ -15,7 +15,7 @@ const Navbar = (props) => {
     checkNav();
   })
 
-  let navclass = `navbar${!landingNav ? ' nav-small' : ""}`;
+  let navclass = `navbar${landingNav ? ' landing-nav' : ""}`;
   let imgclass = `navbackground ${landingNav ? 'dontshow' : ''}`;
 
   return(

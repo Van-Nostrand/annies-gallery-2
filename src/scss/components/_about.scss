@@ -1,13 +1,13 @@
 .about-page-container{
   animation-name: fade-in;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: cubic-bezier(1,.01,1,.65);
 
   display: flex;
   flex-flow: row;
+  flex-grow: 2;
 
   .about-image-element-wrapper{
-    
    
     border: 3px solid red;
 
@@ -21,7 +21,7 @@
   }
 
   .paragraph-container{
-    margin: 0 0 0 1rem;
+    margin-left: 2rem;
     display: flex;
     flex-flow: column;
     padding-top: 1rem;
@@ -29,7 +29,7 @@
 
   p{
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-indent: 2rem;
   }
 }
