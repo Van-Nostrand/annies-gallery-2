@@ -15,7 +15,6 @@ const BackgroundImageDiv = (props) => {
     checkCurrent();
   });
 
-  // let containerclass = `background-image-container ${landingPage ? 'landing-page-background' : ""}`;
   let containerclass = 'background-image-container';
   if(!landingPage){
     containerclass = containerclass + ' background-image-container-small';
@@ -29,9 +28,7 @@ const BackgroundImageDiv = (props) => {
 
   if(imagePath){
     return (
-      <div className={containerclass} style={{backgroundImage: `url(${imagePath})`}}>
-        {/* <img src={imagePath} alt="berrypicture" /> */}
-      </div>
+      <div className={containerclass} style={{backgroundImage: `url(${imagePath})`}}></div>
     )
   }
 

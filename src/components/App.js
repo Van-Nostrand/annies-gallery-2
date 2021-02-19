@@ -27,7 +27,7 @@ export default function App(){
 
   return(
     <Router>
-      <BackgroundImage />
+     
       <Navbar landing={landingPage}  />
       <div className={landingPage ? 'content-container landing-content-container' : 'content-container'}>
         <Switch>

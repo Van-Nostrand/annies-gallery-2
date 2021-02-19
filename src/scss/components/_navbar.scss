@@ -3,11 +3,21 @@
 
 .navbar{
   position: relative;
+  top: 0;
+  // height: vars.$landed-image-height;
 
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   font-size: 4rem;
   align-items: center;
+  justify-content: end;
+
+  background-color: vars.$color-nav-background;
+
+  .navbackground{
+    position: relative;
+    margin-right: 1rem;
+  }
 
   .title-container{
     position: relative;
@@ -15,12 +25,12 @@
     color: white;
 
     padding: 2rem 0 0 0;
-    align-self: "flex-start";
-    font-size: 2em;
+    align-self: center;
+    font-size: 1.8em;
     text-align: center;
     transform-origin: top center;
 
-    transform: translateY(20vh);
+    // transform: translateY(20vh);
 
     h1{
       // height: 6rem;
@@ -58,7 +68,7 @@
 
 .navbar.nav-small .title-container{
   transition: all 2s ease-in;
-  transform: translateY(0vh) scale(0.8);
+  // transform: translate(40vw, 20vho) scale(0.8);
 }
 
 .navbar.nav-small .fake-line{
@@ -75,4 +85,8 @@
     transition: color 2s ease-in;
 
   }
+}
+
+.dontshow{
+  display: none;
 }
