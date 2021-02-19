@@ -2,6 +2,36 @@
   animation-name: fade-in;
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(1,.01,1,.65);
+
+  display: flex;
+  flex-flow: row;
+
+  .about-image-element-wrapper{
+    
+   
+    border: 3px solid red;
+
+    img{
+      display: block;
+      width: 600px;
+      height: 500px;
+      object-fit: none;
+      object-position: 50% 50%;
+    }
+  }
+
+  .paragraph-container{
+    margin: 0 0 0 1rem;
+    display: flex;
+    flex-flow: column;
+    padding-top: 1rem;
+  }
+
+  p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-indent: 2rem;
+  }
 }
 
 @keyframes fade-in{

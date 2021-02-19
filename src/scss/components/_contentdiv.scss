@@ -3,5 +3,8 @@
 
 .content-container{
   position: relative;
-  top: vars.$landed-image-height;
+  padding-top: 2rem;
+  display: flex;
+  flex-flow: column;
+  background-color: vars.$color-lighter-grey;
 }

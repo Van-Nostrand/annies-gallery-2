@@ -20,13 +20,13 @@ const About = (props) => {
   if(imagePath){
     return (
       <div className="about-page-container">
-        <div>
-          {paragraphs}
-        </div>
-        <div>THIS IS THE DANG ABOUT PAGE</div>
         <div className="about-image-element-wrapper">
           <img src={imagePath} alt="berrypicture" />
         </div>
+        <div className='paragraph-container'>
+          {paragraphs} 
+        </div>
+               
       </div>
     )
   }

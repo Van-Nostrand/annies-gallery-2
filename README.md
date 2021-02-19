@@ -27,3 +27,10 @@ AND, for some reason, the root level route needs to have path specified as exact
 now the router works.
 
 Feb 8 - reopened this and don't remember what I was working on... 
+
+SIMPLIFY
+This looks bad
+simplify it
+
+
+martinandI-draft1 background is #333333ff

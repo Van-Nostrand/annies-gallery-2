@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Link, useLocation } from "react-router-dom";
+import NavbarBackgroundImage from "../../assets/martinandI-draft1.svg";
 
 const Navbar = (props) => {
   let [ landingNav, setLandingNav ] = useState();
@@ -15,6 +16,7 @@ const Navbar = (props) => {
   })
 
   let navclass = `navbar${!landingNav ? ' nav-small' : ""}`;
+  let imgclass = `navbackground ${landingNav ? 'dontshow' : ''}`;
 
   return(
     <nav className={navclass} >
@@ -35,6 +37,8 @@ const Navbar = (props) => {
         <Link to="/">LANDING</Link>
     
       </div>
+
+      <img className={imgclass} src={NavbarBackgroundImage} alt='martinandi' />
     </nav>
   );
 }
