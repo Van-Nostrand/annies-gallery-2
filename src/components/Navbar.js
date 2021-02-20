@@ -22,9 +22,9 @@ const Navbar = (props) => {
     <nav className={navclass} >
 
       <div className="title-container">
-        <h1 className="title" >
+        {/* <h1 className="title" > */}
           SCOUTBERRY
-        </h1>
+        {/* </h1> */}
       </div>
 
       <div className="fake-line"></div>
@@ -34,7 +34,7 @@ const Navbar = (props) => {
         <Link to="/about">About</Link>
         <Link to="/works">Works</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/">LANDING</Link>
+        {/* <Link to="/">LANDING</Link> */}
     
       </div>
 
