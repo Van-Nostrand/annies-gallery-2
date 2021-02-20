@@ -72,9 +72,6 @@ a:hover{    color: #242424; }
 a:active{   color: #333333; }
 a:focus{    color: #242424; }
 
-html{
-  
-}
 
 body{
   height: 100%;
@@ -82,15 +79,15 @@ body{
   overflow-x: hidden;
 }
 
+#root{
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+
 #root [class$="-page-container"]{
   padding-left: 3rem;
   padding-right: 3rem;
 }
 
-.app-wrapper{
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-  // display: inline-block;
-  // overflow-y: overlay;
-}
