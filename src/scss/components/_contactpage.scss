@@ -1,6 +1,22 @@
 .contact-page-container{
-  .social-logo{
-    height: 8rem;
+  p{
+    font-family: Staatliches;
+    font-size: 1.5em;
+  }
+
+  .contact-logo-container{
+    display: grid;
+    grid-template-columns: auto auto;
+
+    .social-logo{
+      height: 4rem;
+      grid-column: 1;
+    }
+
+    div{
+      grid-column: 2;
+    }
+
   }
 
 }

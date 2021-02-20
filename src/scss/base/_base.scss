@@ -15,6 +15,17 @@
        url('../../fonts/lobster-v23-latin-regular.svg#Lobster') format('svg'); /* Legacy iOS */
 }
 
+/* staatliches-regular - latin */
+@font-face {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../../fonts/staatliches-v5-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../../fonts/staatliches-v5-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
 /* fredoka-one-regular - latin */
 @font-face {
   font-family: 'Fredoka One';
@@ -74,15 +85,14 @@ a:focus{    color: #242424; }
 
 
 body{
-  height: 100%;
-  overflow-y: overlay;
+  // height: 100%;
   overflow-x: hidden;
 }
 
 #root{
   display: flex;
-  flex-flow: column;
-  min-height: 100vh;
+  flex-flow: row;
+  // min-height: 100vh;
 }
 
 

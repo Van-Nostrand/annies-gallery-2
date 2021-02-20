@@ -16,15 +16,13 @@ const Navbar = (props) => {
   })
 
   let navclass = `navbar${landingNav ? ' landing-nav' : ""}`;
-  let imgclass = `navbackground ${landingNav ? 'dontshow' : ''}`;
+  let imgclass = `navimage ${landingNav ? 'dontshow' : ''}`;
 
   return(
     <nav className={navclass} >
 
       <div className="title-container">
-        {/* <h1 className="title" > */}
-          SCOUTBERRY
-        {/* </h1> */}
+        SCOUTBERRY
       </div>
 
       <div className="fake-line"></div>

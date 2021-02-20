@@ -6,7 +6,9 @@
 
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-start;
+
+  // border: 3px dashed green;
   
   .img-div{
     position: relative;

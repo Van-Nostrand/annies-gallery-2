@@ -24,44 +24,41 @@ export default function App(){
   },[currentPage])
 
   return(
-    <div className='app-wrapper'>
-      <Router>
-     
-        <Navbar landing={landingPage}  />
-        <div className={landingPage ? 'content-container landing-content-container' : 'content-container'}>
-          <Switch>
-            <Route exact path="/">
-              <LandingPage 
-              
-                setCurrentPage={setCurrentPage} 
-                />
-            </Route>
-            <Route path="/about">
-              <About 
-              
-                setCurrentPage={setCurrentPage} 
-                data={PAGE_DATA["about"]} 
-              />
-            </Route>
-            <Route path="/works">
-              <ImageGallery 
-              
-                setCurrentPage={setCurrentPage}  
-                artData={ART_DATA} 
-              />
-            </Route>
-            <Route path="/contact">
-              <Contact 
-              
-                setCurrentPage={setCurrentPage} 
-              />
-            </Route>
-            <Route path="/details/:name" children={<Details artData={ART_DATA} />} /> 
-          </Switch>
-        </div>
-      </Router>
-    </div>
     
+    <Router>
     
+      <Navbar landing={landingPage}  />
+      <div className={landingPage ? 'content-container landing-content-container' : 'content-container'}>
+        <Switch>
+          <Route exact path="/">
+            <LandingPage 
+            
+              setCurrentPage={setCurrentPage} 
+              />
+          </Route>
+          <Route path="/about">
+            <About 
+            
+              setCurrentPage={setCurrentPage} 
+              data={PAGE_DATA["about"]} 
+            />
+          </Route>
+          <Route path="/works">
+            <ImageGallery 
+            
+              setCurrentPage={setCurrentPage}  
+              artData={ART_DATA} 
+            />
+          </Route>
+          <Route path="/contact">
+            <Contact 
+            
+              setCurrentPage={setCurrentPage} 
+            />
+          </Route>
+          <Route path="/details/:name" children={<Details artData={ART_DATA} />} /> 
+        </Switch>
+      </div>
+    </Router>
   );
 }
