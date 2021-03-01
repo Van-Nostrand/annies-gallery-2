@@ -25,7 +25,7 @@ const Navbar = (props) => {
         SCOUTBERRY
       </div>
 
-      <div className="fake-line"></div>
+      {/* <div className="fake-line"></div> */}
 
       <div className="link-container">
 

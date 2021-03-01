@@ -3,9 +3,10 @@
 
 .content-container{
   position: relative; 
-  // padding-top: 2rem;
   padding: 3rem;
   display: inline-block;
   background-color: #fff;
-  // border: 5px dashed purple;
+  margin-left: vars.$sidenav-width;
+  max-width: 100%;
+  min-height: 100%;
 }

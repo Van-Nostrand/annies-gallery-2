@@ -25,7 +25,6 @@
        url('../../fonts/staatliches-v5-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
 /* fredoka-one-regular - latin */
 @font-face {
   font-family: 'Fredoka One';
@@ -85,19 +84,19 @@ a:focus{    color: #242424; }
 
 
 body{
-  // height: 100%;
-  overflow-x: hidden;
+  // overflow-x: hidden;
+  height: 100%;
 }
 
 #root{
   display: flex;
   flex-flow: row;
-  // min-height: 100vh;
+  height: 100%;
 }
 
 
-#root [class$="-page-container"]{
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
+// #root [class$="-page-container"]{
+//   padding-left: 3rem;
+//   padding-right: 3rem;
+// }
 

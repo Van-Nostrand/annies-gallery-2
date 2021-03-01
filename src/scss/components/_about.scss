@@ -1,16 +1,13 @@
 .about-page-container{
   animation-name: fade-in;
   animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(1,.01,1,.65);
+  animation-timing-function: cubic-bezier(1, .01, 1, .65);
 
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  // position: relative;
 
   .about-image-element-wrapper{
-   
-    // border: 3px solid red;
 
     grid-row: 2 / span 5;
     grid-column: 1 / span 4;
@@ -41,7 +38,8 @@
   .paragraph2{
 
     margin-top: 2rem;
-    margin-left: -10rem;
+    // margin-left: -10rem;
+    padding-left: 2rem;
     grid-row: 2 / span 3;
     grid-column: 5 / span 3;
   }
