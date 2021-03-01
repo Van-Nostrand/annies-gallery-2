@@ -16,7 +16,7 @@ const Navbar = (props) => {
   })
 
   let navclass = `navbar${landingNav ? ' landing-nav' : ""}`;
-  let imgclass = `navimage ${landingNav ? 'dontshow' : ''}`;
+  let imgclass = `navimage`;
 
   return(
     <nav className={navclass} >

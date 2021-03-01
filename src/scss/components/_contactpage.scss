@@ -1,22 +1,39 @@
-.contact-page-container{
-  p{
+.contact-page-container {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 2fr) 1fr;
+  grid-template-rows: 1fr repeat(6, 2fr) 1fr;
+
+  p {
+    grid-column: 2 / span 3;
+    grid-row: 2;
+
     font-family: Staatliches;
-    font-size: 1.5em;
+    font-size: 3em;
   }
 
-  .contact-logo-container{
-    display: grid;
-    grid-template-columns: auto auto;
+  .contact-logo-container {
+    grid-column: 2;
+    grid-row: 4 / span 3;
 
-    .social-logo{
-      height: 4rem;
-      grid-column: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: auto auto;
+
+    a {
+      width: max-content;
+
+      .social-logo {
+        height: 4rem;
+        // grid-column: 1;
+      }
     }
 
-    div{
-      grid-column: 2;
+    div {
+      // grid-column: 2;
     }
-
   }
-
 }
