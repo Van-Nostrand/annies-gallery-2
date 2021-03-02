@@ -7,8 +7,8 @@ const Contact = (props) => {
   let [ inputText, setInputText ] = useState("");
 
   useEffect(() => {
-    props.setCurrentPage(window.location);
-    console.log(window.location);
+    props.setCurrentPage("/contact");
+  
   })
 
   return(
@@ -20,17 +20,15 @@ const Contact = (props) => {
         <a href="#">
           <img className="social-logo" src={EmailLogo} />
         </a>
-        {/* <div>scoutberry@gmail.com</div> */}
+        
         <a href="#">
           <img className="social-logo" src={FacebookLogo} />
         </a>
-        {/* <div>@Scoutberry</div> */}
+        
         <a href="#">
           <img className="social-logo" src={InstaLogo} />
         </a>
-        {/* <div>@Scoutberry</div> */}
       </div>
-      
       
     </div>
   )

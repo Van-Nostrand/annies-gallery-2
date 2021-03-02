@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import About from "./About";
 import Details from "./Details";
@@ -8,7 +8,6 @@ import Contact from "./Contact";
 import ImageGallery from "./ImageGallery";
 import LandingPage from "./LandingPage";
 
-import Shop from "./Shop";
 import {
   ART_DATA,
   PAGE_DATA
@@ -16,19 +15,14 @@ import {
 
 export default function App(){
 
-  let [ landingPage, setLandingPage ] = useState(true);
   let [ currentPage, setCurrentPage ] = useState();
-
-  useEffect(() => {
-    console.log(currentPage);
-  },[currentPage])
 
   return(
     
     <Router>
     
-      <Navbar landing={landingPage}  />
-      <div className={landingPage ? 'content-container landing-content-container' : 'content-container'}>
+      <Navbar currentPage={currentPage} />
+      <div className='content-container' >
         <Switch>
           <Route exact path="/">
             <LandingPage 

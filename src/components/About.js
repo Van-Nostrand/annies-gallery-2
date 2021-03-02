@@ -12,7 +12,7 @@ const About = (props) => {
   },[]);
 
   useEffect(() => {
-    props.setCurrentPage(window.location);
+    props.setCurrentPage("/about");
   })
 
   let paragraphs = props.data.paragraphs.map((para, i) => 

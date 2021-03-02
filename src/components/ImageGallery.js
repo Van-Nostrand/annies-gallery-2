@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
 import ImageWithObserver from "./ImageWithObserver";
 
-const ImageGallery = ({artData, selectWork}) => {
+const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
 
   let [ imagePaths, setImagePaths ] = useState([]);
 
@@ -13,6 +13,10 @@ const ImageGallery = ({artData, selectWork}) => {
     const images = importAll(require.context('../../assets', false, /thumbnail\.(png|jpe?g|svg)$/));
     setImagePaths(images);
   },[]);
+
+  useEffect(() => {
+    setCurrentPage("/gallery");
+  })
  
   let imageElements = imagePaths.map((src,i) => {
     

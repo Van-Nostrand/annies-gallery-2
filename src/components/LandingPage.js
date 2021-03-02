@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from 'react-router-dom';
 
 const LandingPage = (props) => {
 
   useEffect(() => {
-    props.setCurrentPage(window.location);
+    props.setCurrentPage("/");
   })
+
+  
 
   //import image here
   return(
-    <div className="landing-page-container">
-      
-      <div>LANDING PAGE</div>
-
-    </div>
+    <Link to='/works' className="landing-page-container">
+      <div className={`titlediv`}>SCOUTBERRY</div>
+    </Link>
   )
 }
 

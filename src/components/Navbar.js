@@ -17,15 +17,15 @@ const Navbar = (props) => {
 
   let navclass = `navbar${landingNav ? ' landing-nav' : ""}`;
   let imgclass = `navimage`;
+  let titleclass = `title-container ${props.currentPage === "/" ? "landing-nav-title" : ""}`;
+
 
   return(
     <nav className={navclass} >
 
-      <div className="title-container">
+      <Link to="/" className={titleclass}>
         SCOUTBERRY
-      </div>
-
-      {/* <div className="fake-line"></div> */}
+      </Link>
 
       <div className="link-container">
 
