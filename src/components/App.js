@@ -20,7 +20,6 @@ export default function App(){
   return(
     
     <Router>
-    
       <Navbar currentPage={currentPage} />
       <div className='content-container' >
         <Switch>
