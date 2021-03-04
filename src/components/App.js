@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import About from "./About";
@@ -15,13 +15,22 @@ import {
 
 export default function App(){
 
+  let contentRef = useRef(null);
   let [ currentPage, setCurrentPage ] = useState();
+
+  const checkRef = () => {
+    console.log(contentRef.current);
+  }
+
+  useEffect(() => {
+    checkRef();
+  }); 
 
   return(
     
     <Router>
       <Navbar currentPage={currentPage} />
-      <div className='content-container' >
+      <div ref={contentRef} className='content-container' >
         <Switch>
           <Route exact path="/">
             <LandingPage 

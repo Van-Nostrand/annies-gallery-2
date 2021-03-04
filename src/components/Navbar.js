@@ -4,6 +4,7 @@ import NavbarBackgroundImage from "../../assets/martinandI-draft2.svg";
 
 const Navbar = (props) => {
   let [ landingNav, setLandingNav ] = useState();
+  let [ shrinkNav, setShrinkNav ] = useState();
 
   let current = useLocation();
 
@@ -11,11 +12,15 @@ const Navbar = (props) => {
     setLandingNav(current.pathname === "/" );
   }
 
+  const shrinkTheNav = () => {
+    setShrinkNav(!shrinkNav);
+  }
+
   useEffect(() => {
     checkNav();
   })
 
-  let navclass = `navbar${landingNav ? ' landing-nav' : ""}`;
+  let navclass = `navbar${landingNav ? ' landing-nav' : ""}${shrinkNav ? ' top-nav-shrink': ''}`;
   let imgclass = `navimage`;
   let titleclass = `title-container ${props.currentPage === "/" ? "landing-nav-title" : ""}`;
 
@@ -36,7 +41,7 @@ const Navbar = (props) => {
     
       </div>
 
-      <img className={imgclass} src={NavbarBackgroundImage} alt='martinandi' />
+      <img className={imgclass} src={NavbarBackgroundImage} alt='martinandi' onClick={shrinkTheNav} />
     </nav>
   );
 }

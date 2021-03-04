@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import FacebookLogo from "../../assets/facebook.svg";
-import InstaLogo from "../../assets/instalogo.svg";
+import InstaLogo from "../../assets/instalogoB&W.svg";
 import EmailLogo from "../../assets/emailLogo.svg";
 
 const Contact = (props) => {
@@ -17,15 +17,15 @@ const Contact = (props) => {
         Reach out for more information, or to inquire about commissioned work
       </p>
       <div className="contact-logo-container">
-        <a href="#">
+        <a href="mailto:acgallos@gmail.com">
           <img className="social-logo" src={EmailLogo} />
         </a>
         
-        <a href="#">
+        {/* <a href="#">
           <img className="social-logo" src={FacebookLogo} />
-        </a>
+        </a> */}
         
-        <a href="#">
+        <a href="https://www.instagram.com/scout_berry/">
           <img className="social-logo" src={InstaLogo} />
         </a>
       </div>

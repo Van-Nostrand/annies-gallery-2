@@ -1,3 +1,6 @@
+@use "../abstracts/mixins";
+@use "../abstracts/vars";
+
 .about-page-container {
   animation-name: fade-in;
   animation-duration: 0.5s;
@@ -21,6 +24,12 @@
       height: 500px;
       object-fit: none;
       object-position: 50% 50%;
+
+      @include mixins.respond(phone){
+        width: 80%;
+        max-width: 100vw;
+        height: unset;
+      }
     }
   }
 

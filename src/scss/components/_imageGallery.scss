@@ -47,4 +47,14 @@
       opacity: 0.4;
     }
   }
+
+  @include mixins.respond(phone){
+    flex-flow: column;
+
+    .img-div{
+      max-height: unset;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
 }
