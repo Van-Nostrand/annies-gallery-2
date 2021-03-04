@@ -8,8 +8,7 @@ const Contact = (props) => {
 
   useEffect(() => {
     props.setCurrentPage("/contact");
-  
-  })
+  });
 
   return(
     <div className="contact-page-container">
