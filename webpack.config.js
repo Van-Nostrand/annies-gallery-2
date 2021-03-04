@@ -27,12 +27,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              // Prefer 'dart-sass'
               implementation: require('sass'),
-              // sassOptions: {
-              //   file: "src/sass/main.scss",
-              //   outFile: "public/style.css"
-              // }
             }
           }
         ]
