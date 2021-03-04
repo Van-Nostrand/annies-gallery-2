@@ -3,18 +3,12 @@
 .contact-page-container {
   height: 100%;
 
-  display: grid;
-  grid-template-columns: 1fr repeat(4, 2fr) 1fr;
-  grid-template-rows: 1fr repeat(6, 2fr) 1fr;
-
-  @include mixins.respond(phone){
-    display: flex;
-    flex-flow: column;
-  }
+  display: flex;
+  flex-flow: column;
 
   p {
-    grid-column: 2 / span 3;
-    grid-row: 2;
+    margin-top: 5rem;
+    margin-left: 5rem;
 
     font-family: Staatliches;
     font-size: 3em;
@@ -27,13 +21,12 @@
   }
 
   .contact-logo-container {
-    grid-column: 2;
-    grid-row: 4 / span 3;
-
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    width: 100%;
+    width: 50%;
+    margin-left: 5rem;
+    margin-top: 8rem;
 
     @include mixins.respond(phone){
       flex-flow: row;
@@ -44,6 +37,7 @@
 
     a {
       width: max-content;
+      margin-top: 2rem;
 
       .social-logo {
         height: 4rem;

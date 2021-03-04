@@ -13,7 +13,7 @@ const Contact = (props) => {
   return(
     <div className="contact-page-container">
       <p>
-        Reach out for more information, or to inquire about commissioned work
+        Reach out for information about prints and commissioned work 
       </p>
       <div className="contact-logo-container">
         <a href="mailto:acgallos@gmail.com">
