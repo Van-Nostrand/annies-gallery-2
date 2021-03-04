@@ -21,10 +21,6 @@ const Contact = (props) => {
           <img className="social-logo" src={EmailLogo} />
         </a>
         
-        {/* <a href="#">
-          <img className="social-logo" src={FacebookLogo} />
-        </a> */}
-        
         <a href="https://www.instagram.com/scout_berry/">
           <img className="social-logo" src={InstaLogo} />
         </a>

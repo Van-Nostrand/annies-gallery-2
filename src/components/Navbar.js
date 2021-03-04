@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Link, useLocation } from "react-router-dom";
-import NavbarBackgroundImage from "../../assets/martinandI-draft3.svg";
+import NavbarBackgroundImage from "../../assets/martinandI-draft4.svg";
 
 const Navbar = (props) => {
   let [ landingNav, setLandingNav ] = useState();
