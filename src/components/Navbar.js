@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Link, useLocation } from "react-router-dom";
-import NavbarBackgroundImage from "../../assets/martinandI-draft2.svg";
+import NavbarBackgroundImage from "../../assets/martinandI-draft3.svg";
 
 const Navbar = (props) => {
   let [ landingNav, setLandingNav ] = useState();
@@ -23,6 +23,7 @@ const Navbar = (props) => {
   let navclass = `navbar${landingNav ? ' landing-nav' : ""}${shrinkNav ? ' top-nav-shrink': ''}`;
   let imgclass = `navimage`;
   let titleclass = `title-container ${props.currentPage === "/" ? "landing-nav-title" : ""}`;
+  let linksclass = `link-container ${props.currentPage === "/" ? "landing-nav-links" : ""}`
 
 
   return(
@@ -32,7 +33,7 @@ const Navbar = (props) => {
         SCOUTBERRY
       </Link>
 
-      <div className="link-container">
+      <div className={linksclass}>
 
         <Link to="/about">About</Link>
         <Link to="/works">Works</Link>

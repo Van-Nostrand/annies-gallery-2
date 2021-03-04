@@ -19,7 +19,7 @@ export default function App(){
   let [ currentPage, setCurrentPage ] = useState();
 
   const checkRef = () => {
-    console.log(contentRef.current);
+    console.log(contentRef.current);//?
   }
 
   useEffect(() => {

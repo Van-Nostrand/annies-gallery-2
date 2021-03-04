@@ -1,14 +1,11 @@
-.detail-page-container{
-
-  // width: 100vw;
-  height: 100vh;
+.detail-page-container{  
+  height: 100%;
+  width: 100%;
   
   .image-div{
 
     height: 30rem;
-    // max-height: 20rem;  
-    // height: 20rem;
-
+    
     img{
       width: auto;
       object-fit: contain;
