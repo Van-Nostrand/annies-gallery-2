@@ -132,3 +132,7 @@
 .top-nav-shrink {
   height: vars.$sidenav-width - 7rem;
 }
+
+.shrink-nav {
+  transform: translateY(-100px);
+}

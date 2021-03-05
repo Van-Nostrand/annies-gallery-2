@@ -20,13 +20,13 @@ const Navbar = (props) => {
     checkNav();
   })
 
-  let navclass = `navbar${landingNav ? ' landing-nav' : ""}${shrinkNav ? ' top-nav-shrink': ''}`;
+  // let navclass = `navbar${landingNav ? ' landing-nav' : ""}${shrinkNav ? ' top-nav-shrink': ''}`;
   let imgclass = `navimage`;
   let titleclass = `title-container ${props.currentPage === "/" ? "landing-nav-title" : ""}`;
 
 
   return(
-    <nav className={navclass} >
+    <nav className={props.navClass} >
 
       <Link to="/" className={titleclass}>
         SCOUTBERRY

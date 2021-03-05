@@ -16,4 +16,10 @@
     margin-left: unset;
     margin-top: vars.$phonenav-height;
   }
+
+  .scrolling-target {
+    position: absolute;
+    opacity: 0;
+    top: 400px;
+  }
 }

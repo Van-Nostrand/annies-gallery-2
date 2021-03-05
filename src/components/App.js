@@ -8,6 +8,8 @@ import Contact from "./Contact";
 import ImageGallery from "./ImageGallery";
 import LandingPage from "./LandingPage";
 
+import { useCustomScrollRef } from "../functions/useCustomScrollRef";
+
 import {
   ART_DATA,
   PAGE_DATA
@@ -18,19 +20,28 @@ export default function App(){
   let contentRef = useRef(null);
   let [ currentPage, setCurrentPage ] = useState();
 
+  // SCROLL EFFECT STUFF
+  let scrollTargetRef = useRef(null);
+  let smallNav = useCustomScrollRef(scrollTargetRef, 300);
+  // SCROLL EFFECT STUFF
+
   const checkRef = () => {
-    console.log(contentRef.current);
+    // console.log(contentRef.current);
   }
 
   useEffect(() => {
-    checkRef();
+    // checkRef();
+    // console.log(smallNav);
   }); 
+
+  let navClass = `navbar ${smallNav ? 'shrink-nav' : ''}`;
 
   return(
     
     <Router>
-      <Navbar currentPage={currentPage} />
+      <Navbar navClass={navClass} currentPage={currentPage} smallNav={smallNav} />
       <div ref={contentRef} className='content-container' >
+        <div className="scrolling-target" ref={scrollTargetRef}></div>
         <Switch>
           <Route exact path="/">
             <LandingPage 
