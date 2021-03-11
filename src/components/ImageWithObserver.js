@@ -20,7 +20,7 @@ const ImageWithObserver = ({source, name}) => {
   */
   if(showImage){
     return(
-      <Link className="img-div" to={`/details/${name}`} >
+      <Link className="img-div" to={`/details/${name.split(" ").join("-")}`} >
         <div className="img-hover-text" >more info</div>
         <div className="img-hover-filter"></div>
         <img className="img-thumb" src={source} alt="artwork" />

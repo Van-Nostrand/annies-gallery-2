@@ -33,7 +33,7 @@ export default function App(){
     // checkRef();
     // console.log(smallNav);
   }); 
-
+// console.log(ART_DATA);
   let navClass = `navbar ${smallNav ? 'shrink-nav' : ''}`;
 
   return(
