@@ -1,4 +1,4 @@
-export const ART_DATA = [
+export const OLD_ART_DATA = [
   {
     thumbUrl: `halo1-thumbnail.jpg`, 
     fileName: `halo1.jpg`, 
@@ -56,6 +56,65 @@ export const ART_DATA = [
     name: "jayden"
   },
 ];
+
+export const ART_DATA = [
+  {
+    fileName: 'carved-in-wood.jpg',
+    date: 'DATE HERE', 
+    medium: 'acrylic and ink on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'carved in wood'
+  },
+  {
+    fileName: 'halo.jpg',
+    date: 'DATE HERE', 
+    medium: 'acrylic on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'halo'
+  },
+  {
+    fileName: 'here.jpg',
+    date: 'DATE HERE', 
+    medium: 'acrylic and ink on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'here'
+  },
+  {
+    fileName: 'in-red.jpg',
+    date: 'DATE HERE', 
+    medium: 'acrylic on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'in red'
+  },
+  {
+    fileName: 'les-iles-de-la-madaleine.jpg',
+    date: 'DATE HERE', 
+    medium: 'acrylic and ink on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'les iles de la madaleine'
+  },
+  {
+    fileName: 'moonstone.jpg',
+    date: 'DATE HERE', 
+    medium: 'acrylic on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'moonstone'
+  },
+  {
+    fileName: 'the-void.jpg',
+    date: 'DATE HERE', 
+    medium: 'acrylic and ink on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'the void'
+  },
+  {
+    fileName: 'toy-soldier.jpg',
+    date: 'DATE HERE', 
+    medium: 'acrylic and ink on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'toy soldier'
+  },
+]
 
 export const PAGE_DATA = {
   "works": "",

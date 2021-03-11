@@ -10,7 +10,8 @@ const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
   }
 
   useEffect(() => {
-    const images = importAll(require.context('../../assets', false, /thumbnail\.(png|jpe?g|svg)$/));
+    // const images = importAll(require.context('../../assets', false, /thumbnail\.(png|jpe?g|svg)$/));
+    const images = importAll(require.context('../assets', false, /(@320.jpg)$/));
     setImagePaths(images);
   },[]);
 
@@ -25,6 +26,8 @@ const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
     
     return(<ImageWithObserver name={imageData[0].name.split(" ").join("").toLowerCase()} source={src} key={`imageelement${i}`} />);
   });
+
+  console.log(imagePaths);
 
   return(
     <div className="gallery-page-container">
