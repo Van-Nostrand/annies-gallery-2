@@ -2,57 +2,57 @@ export const OLD_ART_DATA = [
   {
     thumbUrl: `halo1-thumbnail.jpg`, 
     fileName: `halo1.jpg`, 
-    date: "DATE HERE", 
-    medium: "MEDIUM HERE", 
-    description: "Food truck photo booth synth small batch shoreditch", 
+    date: "2017", 
+    medium: "Acrylic on canvas", 
+    description: "description here", 
     name: "halo 1"
   },
   {
     thumbUrl: `uncovered-thumbnail.jpg`, 
     fileName: `uncovered.jpg`, 
-    date: "DATE HERE", 
-    medium: "MEDIUM HERE", 
-    description: "Food truck photo booth synth small batch shoreditch", 
+    date: "2017", 
+    medium: "Acrylic on canvas", 
+    description: "description here", 
     name: "uncovered"
   },
   {
     thumbUrl: `halo2-thumbnail.jpg`, 
     fileName: `halo2.jpg`, 
-    date: "DATE HERE", 
-    medium: "MEDIUM HERE", 
-    description: "Food truck photo booth synth small batch shoreditch", 
+    date: "2018", 
+    medium: "Acrylic on canvas", 
+    description: "description here", 
     name: "halo 2"
   },
   {
     thumbUrl: `martinandi-thumbnail.jpg`, 
     fileName: `martinandi.jpg`, 
-    date: "DATE HERE", 
-    medium: "MEDIUM HERE", 
-    description: "Food truck photo booth synth small batch shoreditch", 
+    date: "2018", 
+    medium: "Acrylic on canvas", 
+    description: "description here", 
     name: "martin and I"
   },
   {
     thumbUrl: `blindfolded-thumbnail.jpg`, 
     fileName: `blindfolded.jpg`, 
-    date: "DATE HERE", 
-    medium: "MEDIUM HERE", 
-    description: "Food truck photo booth synth small batch shoreditch", 
+    date: "2018", 
+    medium: "Acrylic on canvas", 
+    description: "description here", 
     name: "blindfolded"
   },
   {
     thumbUrl: `vortex-thumbnail.jpg`, 
     fileName: `vortex.jpg`, 
-    date: "DATE HERE", 
-    medium: "MEDIUM HERE", 
-    description: "Food truck photo booth synth small batch shoreditch", 
+    date: "2019", 
+    medium: "Acrylic on canvas", 
+    description: "description here", 
     name: "vortex"
   },
   {
     thumbUrl: `jayden-thumbnail.jpg`, 
     fileName: `jayden.jpg`, 
-    date: "DATE HERE", 
-    medium: "MEDIUM HERE", 
-    description: "Food truck photo booth synth small batch shoreditch", 
+    date: "2019", 
+    medium: "Acrylic on canvas", 
+    description: "description here", 
     name: "jayden"
   },
 ];

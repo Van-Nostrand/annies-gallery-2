@@ -44,6 +44,7 @@
 
     @include mixins.respond(phone){
       margin-top: 0;
+      margin-left: 1rem;
     }
 
     h1 {
@@ -78,6 +79,7 @@
       width: 80%;
       z-index: 3;
       margin-top: 0;
+      margin-left: 1rem;
       align-items: start;
     }
     
@@ -125,7 +127,8 @@
   }
 }
 
-.title-container.landing-nav-title {
+.title-container.landing-nav-title,
+.link-container.landing-nav-links {
   opacity: 0;
 }
 

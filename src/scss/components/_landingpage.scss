@@ -1,3 +1,7 @@
+@use "../abstracts/vars";
+@use "../abstracts/mixins";
+
+
 .landing-page-container {
   font-family: Staatliches;
   font-size: 15rem;
@@ -8,8 +12,29 @@
   align-items: center;
   height: 100%;
 
-  .titlediv {
+  @include mixins.respond(phone){
+    width: 100%;
+    font-size: 10rem;
+  }
+
+  .landing-title {
     // transform: translate(-400px, -400px);
+    margin-top: 10rem;
+  }
+
+  .link-container {
+
+    display: flex; 
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+
+    a {
+      font-size: 0.4em;
+      // margin: 2rem;
+    }
   }
 
   .movediv {

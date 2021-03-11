@@ -11,9 +11,17 @@ const LandingPage = (props) => {
 
   //import image here
   return(
-    <Link to='/works' className="landing-page-container">
-      <div className={`titlediv`}>SCOUTBERRY</div>
-    </Link>
+    <div className="landing-page-container">
+      <Link to='/works' className="landing-title">
+        SCOUTBERRY
+      </Link>
+      <div className="link-container">
+        <Link to='/about'>About</Link>
+        <Link to='/works'>Works</Link>
+        <Link to='/contact'>Contact</Link>
+      </div>
+      
+    </div>
   )
 }
 

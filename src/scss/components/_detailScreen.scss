@@ -1,19 +1,47 @@
-.detail-page-container{
+@use "../abstracts/mixins";
 
-  // width: 100vw;
-  height: 100vh;
+.detail-page-container{  
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row; 
+
+  @include mixins.respond(phone){
+    flex-flow: column;
+  }
   
   .image-div{
 
-    height: 30rem;
-    // max-height: 20rem;  
-    // height: 20rem;
+    height: 85vh;
+    // width: 100%;
 
+    @include mixins.respond(phone){
+      height: unset;
+    }
+    
     img{
       width: auto;
       object-fit: contain;
       max-height: 100%;
       max-width: 100%;
+    }
+  }
+
+  .info-div {
+    margin: 3rem;
+
+    @include mixins.respond(phone){
+      margin: 0;
+      margin-top: 3rem;
+    }
+
+    div {
+      font-size: 1.5em;
+    }
+
+    .art-title {
+      font-size: 2.3em;
+      margin-bottom: 1.2rem;
     }
   }
 }

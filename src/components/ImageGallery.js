@@ -19,9 +19,9 @@ const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
     setCurrentPage("/gallery");
   })
  
+  // in an effort to keep things flexible I've made it too complicated
   let imageElements = imagePaths.map((src,i) => {
     
-    //as usual, in an effort to keep things flexible I've made it too complicated
     let imageData = artData.filter(art => RegExp(`${ art.name.split(" ").join("")}`.toLowerCase()).test(src) );
     
     return(<ImageWithObserver name={imageData[0].name.split(" ").join("").toLowerCase()} source={src} key={`imageelement${i}`} />);
