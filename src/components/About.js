@@ -23,9 +23,13 @@ const About = (props) => {
     </p>
   );
 
-  let paragraph1 = <p className='paragraph1'>Microdosing crucifix sint lo-fi ennui ugh do pok pok la croix affogato. Tempor ex banjo pitchfork, neutra slow-carb biodiesel hot chicken umami poutine duis mollit disrupt. Umami cloud bread banjo, squid quis adaptogen qui coloring book mollit humblebrag edison bulb. Craft beer meggings vice irony. Do etsy mumblecore hexagon, selfies elit reprehenderit. Est flexitarian pug, enim slow-carb bespoke polaroid glossier nostrud fanny pack. Est tofu 8-bit cloud bread blog wayfarers DIY.</p>;
+  // let paragraph1 = <p className='paragraph1'>I have been painting since I can remember but I have been working more seriously with acrylic and ink on canvas for 6 years, focusing on an abstract style. In this series, I wanted to capture moments of reflection, and I try to offer respect for a moment in each piece </p>;
 
-  let paragraph2 = <p className='paragraph2'>Man braid adipisicing chambray shabby chic. Officia id tacos four loko, forage deserunt pug letterpress do minim waistcoat. Nisi cliche hammock, thundercats ex labore irure chicharrones cornhole in cupidatat synth nulla chillwave. Listicle kickstarter raw denim, laborum magna lumbersexual cardigan activated charcoal small batch salvia. Hashtag neutra magna dolore squid, next level waistcoat velit literally normcore. Activated charcoal hell of dolore, artisan gochujang bicycle rights nulla banh mi kinfolk echo park fanny pack yuccie.</p>;
+  // let altparagraph = <p className="paragraph1">
+  //   Scoutberry (or Annie as she's known to her friends) has had an interest in art which began in childhood, that developed further upon discovering a love for working with acrylic and ink as an adult. She strives to capture and respect moments of reflection in her own abstract way
+  // </p>
+
+  let paragraph1 = <p className='paragraph1'>"I have always aspired to create a mood in my work; to paint the physical with the emotional, and show the beauty in the grey of things"</p>;
 
   
 
@@ -35,8 +39,9 @@ const About = (props) => {
         <div className="about-image-element-wrapper">
           <img src={imagePath} alt="berrypicture" />
         </div>
+        {/* {paragraph1} */}
+        {/* {altparagraph} */}
         {paragraph1}
-        {paragraph2}
                
       </div>
     )

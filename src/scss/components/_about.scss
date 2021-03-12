@@ -10,9 +10,12 @@
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 1fr);
 
+  margin-top: 3rem;
+
   @include mixins.respond(phone){
     display: flex;
     flex-flow: column;
+    margin-top: 0;
   }
 
   .about-image-element-wrapper {
@@ -40,7 +43,7 @@
     text-indent: 2rem;
     text-rendering: optimizeLegibility;
     color: #333;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
   }
 
   .paragraph1 {

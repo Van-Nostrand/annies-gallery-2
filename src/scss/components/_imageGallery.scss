@@ -10,8 +10,9 @@
 
   .img-div{
     position: relative;
-    margin: 2rem 4rem;
-    max-height: 25rem;
+    margin: 2rem 2rem;
+    max-height: min-content;
+    max-width: min-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,8 +35,9 @@
       transition: opacity 100ms ease-in;
     }
 
-    a{
-      // z-index: 4;
+    img{
+      max-width: 25rem;
+      max-height: 25rem;
     }
   }
 

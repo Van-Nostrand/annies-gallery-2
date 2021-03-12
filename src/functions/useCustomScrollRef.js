@@ -19,8 +19,8 @@ export function useCustomScrollRef(scrollRef, bufferValue){
     const scrollTargetTop = topPos(scrollRef.current) + window.scrollY;
     const scrollTargetBottom = bottomPos(scrollRef.current) + window.scrollY;
 
-    console.log("scrolltargettop");
-    console.log(scrollTargetTop)
+    // console.log("scrolltargettop");
+    // console.log(scrollTargetTop)
 
     const onScroll = () => {
 
