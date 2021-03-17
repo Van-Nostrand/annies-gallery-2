@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import useGetWindowSize from "../functions/useGetWindowSize";
+import EmailLogo from "../../assets/emailLogo.svg";
 
 const Details = ({artData}) => {
 
@@ -9,7 +10,7 @@ const Details = ({artData}) => {
   const [ theImage, setTheImage ] = useState();
   const [ imageData, setImageData ] = useState(artData.filter(art => RegExp(`${name.replace(' ', '-')}.(jpe?g|png)`).test(art.fileName))[0]);
 
-  console.log(name);
+  // console.log(name);
 
   //regex inside require.context needs to be static. That means getting all of the files that match a predefined regex pattern, and THEN parsing through the array.
   useEffect(() => {
@@ -36,7 +37,11 @@ const Details = ({artData}) => {
         <div className="medium">{imageData.medium}</div>
         {/* <div className="date-div">{imageData.date}</div> */}
         {/* <div className="description">{imageData.description}</div> */}
-        <a href={`mailto:acgallos@gmail.com?subject=Inquiry: ${imageData.name}`}>email for information on pricing and prints</a>
+        <div className="size">{imageData.size}</div>
+        <a href={`mailto:acgallos@gmail.com?subject=Inquiry: ${imageData.name}`}>
+          <img src={EmailLogo} />
+            email for information on pricing and prints
+        </a>
      
       </div>
     </div>

@@ -45,27 +45,23 @@ export default function App(){
         <Switch>
           <Route exact path="/">
             <LandingPage 
-            
               setCurrentPage={setCurrentPage} 
               />
           </Route>
           <Route path="/about">
             <About 
-            
               setCurrentPage={setCurrentPage} 
               data={PAGE_DATA["about"]} 
             />
           </Route>
           <Route path="/works">
             <ImageGallery 
-            
               setCurrentPage={setCurrentPage}  
               artData={ART_DATA} 
             />
           </Route>
           <Route path="/contact">
             <Contact 
-            
               setCurrentPage={setCurrentPage} 
             />
           </Route>

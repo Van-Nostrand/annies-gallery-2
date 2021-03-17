@@ -20,6 +20,11 @@
   .landing-title {
     // transform: translate(-400px, -400px);
     margin-top: 10rem;
+    max-width: 100%;
+
+    @media only screen and (min-width: 401px) { font-size: 0.9em; };
+    @media only screen and (max-width: 400px) { font-size: 0.85em; };
+    @media only screen and (max-width: 370px) { font-size: 0.75em; };
   }
 
   .link-container {
@@ -28,11 +33,11 @@
     flex-flow: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
-    
+    width: 85%;
+    margin-top: 1rem;
 
     a {
-      font-size: 0.4em;
+      font-size: 0.3em;
       // margin: 2rem;
     }
   }

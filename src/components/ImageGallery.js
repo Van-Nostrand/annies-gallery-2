@@ -7,7 +7,7 @@ const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
   let windowsize = useGetWindowSize();
   let [ imagePaths, setImagePaths ] = useState([]);
   let [ deviceSize, setDeviceSize ] = useState("");
-  let [ imgSuffix, setImgSuffix ] = useState("@")
+  let [ imgSuffix, setImgSuffix ] = useState("@");
 
 
   const importAll = (r) => {
@@ -46,7 +46,7 @@ const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
   
   useEffect(() => {
     let images;
-    console.log(`devicesize === ${deviceSize}`)
+    // console.log(`devicesize === ${deviceSize}`)
     if(deviceSize === "phone"){
       images = importAll(require.context('../assets/', false, /(@150.jpg)$/));
     }
@@ -54,12 +54,14 @@ const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
       images = importAll(require.context('../assets/', false, /(@320.jpg)$/));
     }
     else if (deviceSize === "tab-land" || deviceSize === "small-pc" || deviceSize === "large-pc"){
-      console.log("triggered")
+      // console.log("triggered")
       images = importAll(require.context('../assets/', false, /(@768.jpg)$/));
     }
     else if (deviceSize === ""){
       images = [];
     }
+
+    // console.log(images);
      
     setImagePaths(images);
   },[deviceSize]);  
