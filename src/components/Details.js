@@ -4,22 +4,17 @@ import useGetWindowSize from "../functions/useGetWindowSize";
 
 const Details = ({artData}) => {
 
-  // console.log(artData);
 
   const {name} = useParams();
   const [ theImage, setTheImage ] = useState();
-  const [ imageData, setImageData ] = useState(artData.filter(art => art.fileName === `${name.replace(' ', '-')}.jpg`)[0]);
+  const [ imageData, setImageData ] = useState(artData.filter(art => RegExp(`${name.replace(' ', '-')}.(jpe?g|png)`).test(art.fileName))[0]);
 
   console.log(name);
 
   //regex inside require.context needs to be static. That means getting all of the files that match a predefined regex pattern, and THEN parsing through the array.
   useEffect(() => {
-    // let nameregex = subject.name.split(" ").join("").toLowerCase();
-    // const images = require.context("../assets", false, /^(?!.*thumbnail).*(jpe?g|png).*$/);
-    const img = require(`../assets/${name}@768.jpg`);
-    // let results = images.keys().map(images);
-    // let image = results.filter(imgkey => RegExp(`.*(${name}).*`).test(imgkey));
-    // setTheImage(image[0]);
+    
+    const img = require(`../assets/${name}@768.${imageData.fileName.split(".")[imageData.fileName.split(".").length - 1]}`);
     setTheImage(img);
   },[])
 
@@ -34,7 +29,7 @@ const Details = ({artData}) => {
   return(
     <div className="detail-page-container">
       <div className="image-div">
-        <a href={require(`../assets/${name}.jpg`)}><img className="fullsize-img" src={theImage} /></a>
+        <a href={require(`../assets/${imageData.fileName}`)}><img className="fullsize-img" src={theImage} /></a>
       </div>
       <div className="info-div">
         <div className="art-title">{imageData.name}</div>

@@ -63,56 +63,102 @@ export const ART_DATA = [
     date: 'DATE HERE', 
     medium: 'acrylic and ink on canvas', 
     description: 'Food truck photo booth synth small batch shoreditch', 
-    name: 'carved in wood'
+    name: 'carved in wood',
+    size: '24 x 36',
+    price: '$600'
   },
   {
     fileName: 'halo.jpg',
     date: 'DATE HERE', 
     medium: 'acrylic on canvas', 
     description: 'Food truck photo booth synth small batch shoreditch', 
-    name: 'halo'
+    name: 'halo',
+    size: '24 x 24',
+    price: '$350'
   },
   {
     fileName: 'here.jpg',
     date: 'DATE HERE', 
     medium: 'acrylic and ink on canvas', 
     description: 'Food truck photo booth synth small batch shoreditch', 
-    name: 'here'
+    name: 'here',
+    size: '24 x 24',
+    price: '$400'
   },
   {
     fileName: 'in-red.jpg',
     date: 'DATE HERE', 
     medium: 'acrylic on canvas', 
     description: 'Food truck photo booth synth small batch shoreditch', 
-    name: 'in red'
+    name: 'in red',
+    size: '14 x 18',
+    price: '$350'
   },
   {
     fileName: 'les-iles-de-la-madaleine.jpg',
     date: 'DATE HERE', 
     medium: 'acrylic and ink on canvas', 
     description: 'Food truck photo booth synth small batch shoreditch', 
-    name: 'les iles de la madaleine'
+    name: 'les iles de la madaleine',
+    size: '36 x 36',
+    price: '$600'
   },
   {
     fileName: 'moonstone.jpg',
     date: 'DATE HERE', 
     medium: 'acrylic on canvas', 
     description: 'Food truck photo booth synth small batch shoreditch', 
-    name: 'moonstone'
+    name: 'moonstone',
+    size: '36 x 36',
+    price: '$800'
   },
   {
     fileName: 'the-void.jpg',
     date: 'DATE HERE', 
     medium: 'acrylic and ink on canvas', 
     description: 'Food truck photo booth synth small batch shoreditch', 
-    name: 'the void'
+    name: 'the void',
+    size: '16 x 20',
+    price: '$300'
   },
   {
     fileName: 'toy-soldier.jpg',
     date: 'DATE HERE', 
     medium: 'acrylic and ink on canvas', 
     description: 'Food truck photo booth synth small batch shoreditch', 
-    name: 'toy soldier'
+    name: 'toy soldier',
+    size: '36 x 48',
+    price: '$600'
+  },
+]
+
+export const OTHER_ART_DATA = [
+  {
+    fileName: '',
+    date: 'DATE HERE', 
+    medium: 'acrylic on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'the saddies',
+    size: '14 x 18',
+    price: '$300'
+  },
+  {
+    fileName: '',
+    date: 'DATE HERE', 
+    medium: 'acrylic and ink on canvas', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'Legs',
+    size: '36 x 48',
+    price: '$400'
+  },
+  {
+    fileName: '',
+    date: 'DATE HERE', 
+    medium: 'acrylic and ink on wood', 
+    description: 'Food truck photo booth synth small batch shoreditch', 
+    name: 'Sir Martin',
+    size: '19 x 18',
+    price: '$300'
   },
 ]
 
