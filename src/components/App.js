@@ -8,7 +8,8 @@ import Contact from "./Contact";
 import ImageGallery from "./ImageGallery";
 import LandingPage from "./LandingPage";
 
-import { useCustomScrollRef } from "../functions/useCustomScrollRef";
+import useCustomScrollRef from "../functions/useCustomScrollRef";
+import useGetWindowSize from "../functions/useGetWindowSize";
 
 import {
   ART_DATA,
@@ -22,8 +23,10 @@ export default function App(){
 
   // SCROLL EFFECT STUFF
   let scrollTargetRef = useRef(null);
-  let smallNav = useCustomScrollRef(scrollTargetRef, 300);
+  let smallNav = useCustomScrollRef(scrollTargetRef, 150);
   // SCROLL EFFECT STUFF
+
+  let currentWindowSize = useGetWindowSize();
 
   const checkRef = () => {
     // console.log(contentRef.current);
@@ -34,8 +37,13 @@ export default function App(){
     // console.log(smallNav);
   }); 
 // console.log(ART_DATA);
-  let navClass = `navbar ${smallNav ? 'shrink-nav' : ''}`;
-
+  let navClass;
+  if(currentWindowSize.width < 600){
+    navClass = `navbar ${smallNav ? 'shrink-nav' : ''}`;
+  } 
+  else {
+    navClass = "navbar willnotshrink";
+  }
   return(
     
     <Router>

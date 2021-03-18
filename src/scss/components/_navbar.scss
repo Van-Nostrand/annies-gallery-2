@@ -19,6 +19,8 @@
   background-color: vars.$color-nav-background;
   z-index:1;
 
+  
+
   @include mixins.respond(phone) { 
     height: vars.$phonenav-height;
     width: 100vw;
@@ -46,6 +48,8 @@
       margin-top: 0;
       margin-left: 1rem;
     }
+
+    
 
     h1 {
       display: inline-block;
@@ -137,5 +141,18 @@
 }
 
 .shrink-nav {
-  transform: translateY(-100px);
+  transform: translateY(-10rem);
+  .title-container {
+    transform: translateY(10rem);
+  }
+  .link-container {
+    transform: translateY(5.3rem);
+  }
+  .navimage {
+    transform: scale(0.6) translate(8rem, 5.3rem);
+  }
+}
+
+.navbar, .title-container, .link-container, .navimage {
+  transition: all 200ms ease-in-out;
 }

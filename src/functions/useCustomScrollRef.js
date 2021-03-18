@@ -1,7 +1,7 @@
 import { useState, useLayoutEffect } from "react";
 
 //bufferValue is an integer defining the number of pixels past the target element that can be scrolled to before sending show=false
-export function useCustomScrollRef(scrollRef, bufferValue){
+export default function useCustomScrollRef(scrollRef, bufferValue){
   const [show, doShow] = useState(false);
   const [buffer, setBuffer] = useState(bufferValue);
 
@@ -10,8 +10,6 @@ export function useCustomScrollRef(scrollRef, bufferValue){
     //get the top position of an element
     const topPos = element => element.getBoundingClientRect().top;
     const bottomPos = element => element.getBoundingClientRect().bottom;
-
-    
 
     // add window.scrollY to mitigate issues when refreshing the page.
     //element.getBoundingClientRect() is relative to the window when the page loads
