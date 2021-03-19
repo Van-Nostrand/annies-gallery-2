@@ -10,7 +10,6 @@ const Details = ({artData}) => {
   const [ theImage, setTheImage ] = useState();
   const [ imageData, setImageData ] = useState(artData.filter(art => RegExp(`${name.replace(' ', '-')}.(jpe?g|png)`).test(art.fileName))[0]);
 
-  // console.log(name);
 
   //regex inside require.context needs to be static. That means getting all of the files that match a predefined regex pattern, and THEN parsing through the array.
   useEffect(() => {
