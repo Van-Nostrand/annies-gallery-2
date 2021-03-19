@@ -130,11 +130,8 @@ export const ART_DATA = [
     size: '36 x 48',
     price: '$600'
   },
-]
-
-export const OTHER_ART_DATA = [
   {
-    fileName: '',
+    fileName: 'the-saddies.png',
     date: 'DATE HERE', 
     medium: 'acrylic on canvas', 
     description: 'Food truck photo booth synth small batch shoreditch', 
@@ -142,6 +139,10 @@ export const OTHER_ART_DATA = [
     size: '14 x 18',
     price: '$300'
   },
+]
+
+export const OTHER_ART_DATA = [
+  
   {
     fileName: '',
     date: 'DATE HERE', 

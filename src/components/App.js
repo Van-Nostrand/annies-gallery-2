@@ -23,7 +23,8 @@ export default function App(){
 
   // SCROLL EFFECT STUFF
   let scrollTargetRef = useRef(null);
-  let smallNav = useCustomScrollRef(scrollTargetRef, 150);
+  // let smallNav = useCustomScrollRef(scrollTargetRef, 100);
+  let smallNav = useCustomScrollRef(150);
   // SCROLL EFFECT STUFF
 
   let currentWindowSize = useGetWindowSize();
@@ -79,3 +80,5 @@ export default function App(){
     </Router>
   );
 }
+
+

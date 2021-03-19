@@ -13,7 +13,6 @@
   .image-div{
 
     height: 85vh;
-    // width: 100%;
 
     @include mixins.respond(phone){
       height: unset;
@@ -37,7 +36,6 @@
     }
 
     div {
-      // font-size: 1.5em;
       margin-bottom: 0.2rem;
     }
 
@@ -46,9 +44,14 @@
       margin-bottom: 0.7rem;
     }
 
-    a img {
-      height: 2rem;
-      margin-right: 0.3rem;
+    a {
+
+      font-weight: 300;
+
+      img {
+        height: 1.2rem;
+        margin-right: 0.9rem;
+      }
     }
   }
 }

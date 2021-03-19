@@ -1,36 +1,23 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 
 //bufferValue is an integer defining the number of pixels past the target element that can be scrolled to before sending show=false
-export default function useCustomScrollRef(scrollRef, bufferValue){
-  const [show, doShow] = useState(false);
-  const [buffer, setBuffer] = useState(bufferValue);
+export default function useCustomScrollRef( bufferValue, initialScrollTarget = 0){
+  const [ show, doShow ] = useState(false);
+  const [ scrollTarget, setScrollTarget ] = useState(initialScrollTarget + bufferValue);
 
   useLayoutEffect(() => {
 
-    //get the top position of an element
-    const topPos = element => element.getBoundingClientRect().top;
-    const bottomPos = element => element.getBoundingClientRect().bottom;
-
-    // add window.scrollY to mitigate issues when refreshing the page.
-    //element.getBoundingClientRect() is relative to the window when the page loads
-    //if the user refreshes the page while scrolled halfway down, and the page loads scrolled past the target element, then the target element returns a negative value and "show" will never flag true
-    const scrollTargetTop = topPos(scrollRef.current) + window.scrollY;
-    const scrollTargetBottom = bottomPos(scrollRef.current) + window.scrollY;
-
-    // console.log("scrolltargettop");
-    // console.log(scrollTargetTop)
-
-    const onScroll = () => {
-
+    const onScroll = () => { 
+      
       //get the scroll position
-      const scrollPosTop = window.scrollY;
-      // console.log(`target is between ${scrollTargetTop} and  ${scrollTargetBottom}`);
+      const currentScrollPosition = window.scrollY;
 
-      //see if the scroll position is past the div
-      if (scrollTargetTop < scrollPosTop && scrollTargetBottom + buffer > scrollPosTop) {
+      //see if the scroll position is past the target plus buffer
+      if (scrollTarget <= currentScrollPosition) {
         doShow(true);
       } 
-      else if(scrollTargetTop > scrollPosTop){
+      // if the scrollposition has not eclipsed the scroll target, do not show
+      else if(scrollTarget > currentScrollPosition){
         doShow(false);
       }
     };

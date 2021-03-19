@@ -20,7 +20,6 @@ const Navbar = (props) => {
     checkNav();
   })
 
-  // let navclass = `navbar${landingNav ? ' landing-nav' : ""}${shrinkNav ? ' top-nav-shrink': ''}`;
   let imgclass = `navimage`;
   let titleclass = `title-container ${props.currentPage === "/" ? "landing-nav-title" : ""}`;
   let linksclass = `link-container ${props.currentPage === "/" ? "landing-nav-links" : ""}`

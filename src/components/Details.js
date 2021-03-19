@@ -40,7 +40,7 @@ const Details = ({artData}) => {
         <div className="size">{imageData.size}</div>
         <a href={`mailto:acgallos@gmail.com?subject=Inquiry: ${imageData.name}`}>
           <img src={EmailLogo} />
-            email for information on pricing and prints
+            pricing and prints
         </a>
      
       </div>

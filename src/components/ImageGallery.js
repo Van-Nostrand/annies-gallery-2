@@ -46,23 +46,19 @@ const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
   
   useEffect(() => {
     let images;
-    // console.log(`devicesize === ${deviceSize}`)
     if(deviceSize === "phone"){
-      images = importAll(require.context('../assets/', false, /(@150.jpg)$/));
+      images = importAll(require.context('../assets/', false, /(@150.(jpe?g|png))$/));
     }
     else if (deviceSize === "tab-port"){
-      images = importAll(require.context('../assets/', false, /(@320.jpg)$/));
+      images = importAll(require.context('../assets/', false, /(@320.(jpe?g|png))$/));
     }
     else if (deviceSize === "tab-land" || deviceSize === "small-pc" || deviceSize === "large-pc"){
-      // console.log("triggered")
-      images = importAll(require.context('../assets/', false, /(@768.jpg)$/));
+      images = importAll(require.context('../assets/', false, /(@768.(jpe?g|png))$/));
     }
     else if (deviceSize === ""){
       images = [];
     }
-
-    // console.log(images);
-     
+    
     setImagePaths(images);
   },[deviceSize]);  
 
