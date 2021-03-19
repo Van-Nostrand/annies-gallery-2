@@ -24,7 +24,7 @@ const Contact = (props) => {
           <img className="social-logo" src={InstaLogo} />
         </a>
       </div>
-
+    <Footer />
       
     </div>
   )
