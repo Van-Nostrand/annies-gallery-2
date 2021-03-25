@@ -38,6 +38,7 @@ const Footer = () => {
     color: "rgba(0,0,0,0.6)",
     zIndex:"0"
   }
+  
   return (
     <div className="footer" style={style}>
       <div className="footer-text">Copyright © 2021 Daniel Doull</div>

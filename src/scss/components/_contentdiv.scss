@@ -12,6 +12,8 @@
   min-height: 100%;
   box-sizing: border-box;
 
+  // background-color: purple;
+
   @include mixins.respond(phone){
     margin-left: unset;
     margin-top: vars.$phonenav-height;

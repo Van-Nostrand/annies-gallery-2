@@ -18,12 +18,12 @@ const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
 
     if(windowsize.width < 600){
       setDeviceSize("phone");
-      setImgSuffix("@150");
+      setImgSuffix("@320");
       return "phone";
     }
     else if(windowsize.width < 900){
       setDeviceSize("tab-port");
-      setImgSuffix("@320");
+      setImgSuffix("@480");
       return "tab-port";
     }
     else if(windowsize.width < 1200){
@@ -47,10 +47,10 @@ const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
   useEffect(() => {
     let images;
     if(deviceSize === "phone"){
-      images = importAll(require.context('../assets/', false, /(@150.(jpe?g|png))$/));
+      images = importAll(require.context('../assets/', false, /(@320.(jpe?g|png))$/));
     }
     else if (deviceSize === "tab-port"){
-      images = importAll(require.context('../assets/', false, /(@320.(jpe?g|png))$/));
+      images = importAll(require.context('../assets/', false, /(@480.(jpe?g|png))$/));
     }
     else if (deviceSize === "tab-land" || deviceSize === "small-pc" || deviceSize === "large-pc"){
       images = importAll(require.context('../assets/', false, /(@768.(jpe?g|png))$/));

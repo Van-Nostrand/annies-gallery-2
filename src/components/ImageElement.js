@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const ImageElement = (props) => {
   return(
     <div className="img-div" onClick={() => console.log("clicked div")} >
