@@ -1,12 +1,14 @@
 import React, {useState, useEffect, useRef} from "react";
 import { Link } from "react-router-dom";
 import {useIntersectionObserver} from "../functions/useIntersectionObserver";
+import { Image, Transformation, CloudinaryContext } from "cloudinary-react";
+import cloud_name from "../config/config";
 
 /**
  * loads a placeholder until the image is ready to load
  * @param {source} props path/name of image file
  */
-const ImageWithObserver = ({source, name}) => {
+const ImageWithObserver = ({imageData, width}) => {
 
   const [ showImage, setShowImage ] = useState(false);
   const placeholderRef = useRef(null);
@@ -20,22 +22,22 @@ const ImageWithObserver = ({source, name}) => {
   */
   if(showImage){
     return(
-      <div className="img-div">
-        <Link to={`/details/${name.split(" ").join("-")}`} >
-          <div className="img-hover-text" >more info</div>
-          <div className="img-hover-filter"></div>
-          <img className="img-thumb" src={source} alt="artwork" />
-        </Link>
-      </div>
-      
+      <Link className="thumbnail" to={`/details/${imageData.name.toLowerCase().replace(/( )/gi, "+")}`} >
+        <div className="thumbnail-hover-text" >more info</div>
+        <CloudinaryContext className="cloudinary-context" cloudName={cloud_name.cloud_name}>
+          <Image publicId={imageData.publicId} >
+            <Transformation width={width} crop="scale" />
+          </Image>
+        </CloudinaryContext>
+      </Link>
     )
   }
 
   return(
-    <div ref={placeholderRef} className="img-div"  >
-      <div className="img-hover-text">more info</div>
-      <div className="img-hover-filter"></div>
-      <span className="img-thumb" ></span>
+    <div ref={placeholderRef} className="thumbnail-div"  >
+      <div className="thumbnail-hover-text">more info</div>
+      <div className="thumbnail-hover-filter"></div>
+      <span className="thumbnail-placeholder" ></span>
     </div>
   )
 }
