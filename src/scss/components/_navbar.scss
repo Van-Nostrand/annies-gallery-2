@@ -17,7 +17,7 @@
 
   font-size: 4rem;
   background-color: vars.$color-nav-background;
-  z-index:1;
+  z-index: 1;
 
   
 
@@ -32,7 +32,7 @@
   }
 
   .title-container {
-    position: relative;
+    position: fixed;
 
     text-align: center;
     color: white;
@@ -43,6 +43,8 @@
     margin-top: 3.6rem;
 
     grid-area: title;
+
+    z-index: 2;
 
     @include mixins.respond(phone){
       margin-top: 0;
@@ -98,6 +100,8 @@
      
       transform: rotate(90deg) ;
 
+      z-index: 10;
+
       @include mixins.respond(phone){
         transform: rotate(0);
       }
@@ -116,12 +120,14 @@
   }
 
   .navimage {
-    position: relative;
+    position: fixed;
     justify-self: flex-end;
 
     grid-area: icon;
     align-self: end;
-    width: 100%;
+
+    z-index: 1;
+    width: 60%;
 
     @include mixins.respond(phone){
       grid-column: 2 / span 2;
@@ -141,15 +147,17 @@
 }
 
 .shrink-nav {
-  transform: translateY(-10rem);
+  // transform: translateY(-10rem);
+  transform: scaleY(0.8);
   .title-container {
-    transform: translateY(10rem);
+    // transform: translateY(10rem);
   }
   .link-container {
-    transform: translateY(5.3rem);
+    // transform: translateY(5.3rem);
   }
   .navimage {
-    transform: scale(0.6) translate(8rem, 5.3rem);
+    // transform: scale(0.6) translate(8rem, 5.3rem);
+    
   }
 }
 
