@@ -18,39 +18,14 @@ import {
 
 export default function App(){
 
-  let contentRef = useRef(null);
   let [ currentPage, setCurrentPage ] = useState();
 
-  // SCROLL EFFECT STUFF
-  let scrollTargetRef = useRef(null);
-  // let smallNav = useCustomScrollRef(scrollTargetRef, 100);
-  let smallNav = useCustomScrollRef(150);
-  // SCROLL EFFECT STUFF
-
-  let currentWindowSize = useGetWindowSize();
-
-  const checkRef = () => {
-    // console.log(contentRef.current);
-  }
-
-  useEffect(() => {
-    // checkRef();
-    // console.log(smallNav);
-  }); 
-// console.log(ART_DATA);
-  let navClass;
-  if(currentWindowSize.width < 600){
-    navClass = `navbar ${smallNav ? 'shrink-nav' : ''}`;
-  } 
-  else {
-    navClass = "navbar willnotshrink";
-  }
+  
   return(
     
     <Router>
-      <Navbar navClass={navClass} currentPage={currentPage} smallNav={smallNav} />
-      <div ref={contentRef} className='content-container' >
-        <div className="scrolling-target" ref={scrollTargetRef}></div>
+      <Navbar navClass='navbar' currentPage={currentPage}  />
+      <div className='content-container' >
         <Switch>
           <Route exact path="/">
             <LandingPage 

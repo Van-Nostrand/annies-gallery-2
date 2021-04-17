@@ -21,28 +21,32 @@ const Navbar = (props) => {
   })
 
   let imgclass = `navimage`;
-  let titleclass = `title-container ${props.currentPage === "/" ? "landing-nav-title" : ""}`;
+  let titleclass = `nav-title ${props.currentPage === "/" ? "landing-nav-title" : ""}`;
   let linksclass = `link-container ${props.currentPage === "/" ? "landing-nav-links" : ""}`
 
 
   return(
-    <nav className={props.navClass} >
+    <header className="header-outer">
 
-      <Link to="/" className={titleclass}>
-        SCOUTBERRY
-      </Link>
+      <nav className="header-inner" >
 
-      <div className={linksclass}>
+        <Link to="/" className={titleclass}>
+          SCOUTBERRY
+        </Link>
 
-        <Link to="/about">About</Link>
-        <Link to="/works">Works</Link>
-        <Link to="/contact">Contact</Link>
-        {/* <Link to="/">LANDING</Link> */}
-    
-      </div>
+        <div className={linksclass}>
 
+          <Link to="/about">About</Link>
+          <Link to="/works">Works</Link>
+          <Link to="/contact">Contact</Link>
+          {/* <Link to="/">LANDING</Link> */}
+      
+        </div>
+
+        
+      </nav>
       <img className={imgclass} src={NavbarBackgroundImage} alt='martinandi' onClick={shrinkTheNav} />
-    </nav>
+    </header>
   );
 }
 
