@@ -5,7 +5,8 @@ export const OLD_ART_DATA = [
     date: "2017", 
     medium: "Acrylic on canvas", 
     description: "description here", 
-    name: "halo 1"
+    name: "halo 1",
+    fullUrl: "https://res.cloudinary.com/dhvaidpl9/image/upload/v1616965456/scoutberry/halo_rwidut.jpg"
   },
   {
     thumbUrl: `uncovered-thumbnail.jpg`, 

@@ -7,8 +7,6 @@ const LandingPage = (props) => {
     props.setCurrentPage("/");
   })
 
-  
-
   //import image here
   return(
     <div className="landing-page-container">

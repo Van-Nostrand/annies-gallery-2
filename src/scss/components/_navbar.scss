@@ -169,35 +169,31 @@
 
   position:fixed;
   top: 0;
-  height: 100vh;
-  width: vars.$sidenav-width;
 
   display: flex;
   flex-flow: column;
-
   justify-content: space-between;
+  height: 100vh;
+  width: vars.$sidenav-width;
+  z-index: 1;
 
   font-size: 4rem;
   background-color: vars.$color-nav-background;
-  z-index: 1;
 
   @include mixins.respond(phone) {
-    flex-flow: row;
-    align-items: center;
-
-    justify-content: space-between;
     position: sticky;
     top: vars.$phonenav-inner-height - vars.$phonenav-outer-height; //make this .header-inner-height minus .header-outer height
+    
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
     height: vars.$phonenav-outer-height;
-    background-color: vars.$color-nav-background;
-
     width: unset;
-
     max-width: 100%;
-
     z-index: 10;
 
     font-size: 4rem;
+    background-color: vars.$color-nav-background;
   }
   
   .header-inner {
@@ -231,7 +227,7 @@
       font-size: 1.3em;
       font-family: "Staatliches";
 
-      @include mixins.respond(tab-port) {
+      @include mixins.respond(phone) {
         grid-column: 1 / span 4;
         grid-row: 1;
         margin-top: -0.5rem;
@@ -252,7 +248,7 @@
         ". works ."
         ". . contact";
 
-      @include mixins.respond(tab-port) {
+      @include mixins.respond(phone) {
         display: flex;
         flex-flow: row;
 
@@ -309,7 +305,7 @@
     width: 100%;
     
     
-    @include mixins.respond(tab-port) {
+    @include mixins.respond(phone) {
       position: absolute;
       width: unset;
       height: 75%;
