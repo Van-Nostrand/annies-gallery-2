@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "scoutberry art gallery website",
   "main": "index.js",
-  "engine": {
-    "npm": "7.x"
+  "engines": {
+    "npm": ">=7.0.0"
   },
   "scripts": {
     "start": "pm2-runtime start ecosystem.config.js --env production",
