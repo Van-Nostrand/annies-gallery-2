@@ -10,6 +10,9 @@ module.exports = {
     publicPath: "/",
     assetModuleFilename: "images/[hash]-[name][ext]"
   },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
+  },
   module: {
     rules: [
       {
@@ -35,6 +38,11 @@ module.exports = {
       {
         test: /\.(jpe?g|svg|png|gif)$/,
         type: "asset/resource"
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,

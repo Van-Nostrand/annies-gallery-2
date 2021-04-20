@@ -34,3 +34,10 @@ simplify it
 
 
 martinandI-draft1 background is #333333ff
+
+Things I need to understand
+* declaring modules
+* * what is a module
+* types
+* interfaces
+* svg support?

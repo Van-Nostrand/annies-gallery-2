@@ -2,12 +2,17 @@ import React, {useState, useEffect} from "react";
 import FacebookLogo from "../../assets/facebook.svg";
 import InstaLogo from "../../assets/instalogoB&W.svg";
 import EmailLogo from "../../assets/emailLogo.svg";
+import CSS from "csstype";
 
-const Contact = (props) => {
+type ContactProps = {
+  setCurrentPage: (a: string) => void;
+}
+
+const Contact: React.FC<ContactProps> = ({setCurrentPage}) => {
   let [ inputText, setInputText ] = useState("");
 
   useEffect(() => {
-    props.setCurrentPage("/contact");
+    setCurrentPage("/contact");
   });
 
   return(
@@ -30,13 +35,17 @@ const Contact = (props) => {
   )
 }
 
-const Footer = () => {
-  let style = {
+type FooterProps = {
+
+}
+
+const Footer: React.FC<FooterProps> = () => {
+  let style: CSS.Properties = {
     position: "fixed",
     bottom: "0",
     fontSize: "8px",
-    color: "rgba(0,0,0,0.6)",
-    zIndex:"0"
+    color: "rgba(0,0,0,0.6)"
+   
   }
   
   return (

@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from "react";
 import { Link } from "react-router-dom";
 import {useIntersectionObserver} from "../functions/useIntersectionObserver";
 import { Image, Transformation, CloudinaryContext } from "cloudinary-react";
-import cloud_name from "../config/config";
+import {cloudinaryConfig} from "../config/cloudinaryConfig";
 
 /**
  * loads a placeholder until the image is ready to load
@@ -24,7 +24,7 @@ const ImageWithObserver = ({imageData, width}) => {
     return(
       <Link className="thumbnail" to={`/details/${imageData.name.toLowerCase().replace(/( )/gi, "+")}`} >
         <div className="thumbnail-hover-text" >more info</div>
-        <CloudinaryContext className="cloudinary-context" cloudName={cloud_name.cloud_name}>
+        <CloudinaryContext className="cloudinary-context" cloudName={cloudinaryConfig.cloud_name}>
           <Image publicId={imageData.publicId} >
             <Transformation width={width} crop="scale" />
           </Image>

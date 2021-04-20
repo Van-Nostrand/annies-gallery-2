@@ -1,17 +1,21 @@
-import React, {useState, useEffect} from "react";
-import {useParams} from "react-router-dom";
-import useGetWindowSize from "../functions/useGetWindowSize";
+import * as React from "react";
+import {useState, useEffect} from "react";
+import { useParams } from "react-router-dom";
+// import useGetWindowSize from "../functions/useGetWindowSize";
 import EmailLogo from "../../assets/emailLogo.svg";
 import { Image, Transformation, CloudinaryContext } from "cloudinary-react";
 
-import cloud_name from "../config/config";
+import {cloudinaryConfig} from "../config/cloudinaryConfig";
 
-const Details = ({artData}) => {
+type DetailsProps = {
+  artData: any[]
+}
 
-  const {name} = useParams();
+const Details: React.FC<DetailsProps> = ({artData}) => {
+
+  const { name } = useParams<{name: string}>();
   const [ theImage, setTheImage ] = useState(artData.filter(art => art.name.toLowerCase().replace(/( )/gi, "+") == name)[0]);
   
-
   // if the image isn't imported yet, load placeholder
   // placeholder needs work.. 
   if(!theImage){
@@ -23,7 +27,7 @@ const Details = ({artData}) => {
   return(
     <div className="detail-page-container">
       <div className="image-div">
-        <CloudinaryContext cloudName={cloud_name.cloud_name} >
+        <CloudinaryContext cloudName={cloudinaryConfig.cloud_name} >
           <Image publicId={theImage.publicId}>
 
           </Image>

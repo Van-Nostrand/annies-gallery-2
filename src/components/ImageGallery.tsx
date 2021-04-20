@@ -1,11 +1,13 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, { useEffect } from "react";
 import ImageWithObserver from "./ImageWithObserver";
-import useGetWindowSize from "../functions/useGetWindowSize";
+// import useGetWindowSize from "../functions/useGetWindowSize";
 
-const ImageGallery = ({artData, selectWork, setCurrentPage}) => {
+type ImageGalleryProps = {
+  artData: Array<object>;
+  setCurrentPage: (a: string) => void;
+}
 
-  
-
+const ImageGallery: React.FC<ImageGalleryProps> = ({artData, setCurrentPage}) => {
 
   useEffect(() => {
     setCurrentPage("/gallery");

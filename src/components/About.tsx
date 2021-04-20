@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 
+type AboutProps = {
+  setCurrentPage: (a: string) => void;
+  data: { paragraphs: Array<object> }
+}
 
-const About = (props) => {
+const About: React.FC<AboutProps> = ({setCurrentPage, data}) => {
 
   let [ imagePath, setImagePath ] = useState();
 
@@ -12,10 +16,10 @@ const About = (props) => {
   },[]);
 
   useEffect(() => {
-    props.setCurrentPage("/about");
+    setCurrentPage("/about");
   })
 
-  let paragraphs = props.data.paragraphs.map((para, i) => 
+  let paragraphs = data.paragraphs.map((para, i) => 
     <p 
       className={`about-paragraph-${i + 1} fade-in`} 
       key={`about-p-${i}`}>
@@ -39,8 +43,6 @@ const About = (props) => {
         <div className="about-image-element-wrapper">
           <img src={imagePath} alt="berrypicture" />
         </div>
-        {/* {paragraph1} */}
-        {/* {altparagraph} */}
         {paragraph1}
                
       </div>
